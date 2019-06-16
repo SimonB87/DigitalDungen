@@ -13,7 +13,7 @@
 <div class="container">
   <header>
     <h1>DigitalDungeon the JavaScript Game</h1>
-    <button class="start">Start a new session<button>
+    <button id="start" onclick="">Start a new session</button>
   </header>
   <div class="board">
     <div class="tile x1 y1">
@@ -22,72 +22,72 @@
       <div class="tile--inside tile__doors--enter"> <i class='fas'>&#xf150;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
-      <div class="tile--inside tile__centre"> <i class='hero fas'>&#xf43f;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
+      <div class="tile--inside tile__centre"></div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x2 y1">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x3 y1">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf6d5;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x4 y1">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x5 y1">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
@@ -95,75 +95,75 @@
     <div class="tile x1 y2">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x2 y2">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x3 y2">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf6d5;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x4 y2">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x5 y2">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
@@ -171,73 +171,73 @@
     <div class="tile x1 y3">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x2 y3">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x3 y3">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf6d5;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x4 y3">
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
     </div>
     <div class="tile x5 y3">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
@@ -245,75 +245,75 @@
     <div class="tile x1 y4">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x2 y4">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x3 y4">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf6d5;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x4 y4">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x5 y4">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--south"> <i class='fas pathDoors doors--south'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
@@ -321,72 +321,72 @@
     <div class="tile x1 y5">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x2 y5">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x3 y5">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf6d5;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x4 y5">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--east"> <i class='fas pathDoors doors--east'>&#xf52b;</i> </div>
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--south"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
       <div class="tile--inside tile__placeholder"></div>
 
     </div>
     <div class="tile x5 y5">
 
       <div class="tile--inside tile__placeholder"></div>
-      <div class="tile--inside tile__doors--north"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--north"> <i class='fas pathDoors doors--north'>&#xf52b;</i> </div>
       <div class="tile--inside tile__placeholder"></div>
 
-      <div class="tile--inside tile__doors--west"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__doors--west"> <i class='fas pathDoors doors--west'>&#xf52b;</i> </div>
       <div class="tile--inside tile__centre"> <i class='monster fas'>&#xf188;</i> </div>
-      <div class="tile--inside tile__doors--east"> <i class='fas'>&#xf52b;</i> </div>
+      <div class="tile--inside tile__placeholder"></div>
 
       <div class="tile--inside tile__placeholder"></div>
       <div class="tile--inside tile__doors--exit"> <i class='fas'>&#xf151;</i> </div>
@@ -398,6 +398,7 @@
 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script src="script.js"></script>
+<script src="basicui.js"></script>
+<script src="move.js"></script>
 </body>
 </html>
