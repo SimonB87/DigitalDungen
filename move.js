@@ -42,6 +42,48 @@ moveHero = {
     hero.position = hero.position + results;
 
     $(hero.position + " .tile__centre").prepend( hero.heroAvatar );
+  },
+
+  moveHeroEast : function() {
+    var storeVarStart = hero.position.slice(0, 2);
+    var placeholder = hero.position.slice(2, 3);
+    var storeVarEnd = hero.position.slice(3, 6);//position: ".x1.y1",
+    var results;
+
+    if( placeholder == 1) {
+      results = 2;
+    } else if ( placeholder == 2) {
+      results = 3;
+    } else if ( placeholder == 3) {
+      results = 4;
+    } else if ( placeholder == 4) {
+      results = 5;
+    }
+
+    hero.position = storeVarStart + results + storeVarEnd;
+
+    $(hero.position + " .tile__centre").prepend( hero.heroAvatar );
+  },
+
+  moveHeroWest : function() {
+    var storeVarStart = hero.position.slice(0, 2);
+    var placeholder = hero.position.slice(2, 3);
+    var storeVarEnd = hero.position.slice(3, 6);//position: ".x1.y1",
+    var results;
+
+    if( placeholder == 2) {
+      results = 1;
+    } else if ( placeholder == 3) {
+      results = 2;
+    } else if ( placeholder == 4) {
+      results = 3;
+    } else if ( placeholder == 5) {
+      results = 4;
+    }
+
+    hero.position = storeVarStart + results + storeVarEnd;
+
+    $(hero.position + " .tile__centre").prepend( hero.heroAvatar );
   }
 
 }

@@ -20,17 +20,43 @@ $(document).ready(function(){
     $('i.doors--north').click(function() {
       $('i.hero').remove();
       moveHero.moveHeroNorth();
+      moveHeroPreparation();
     });
 
     $('i.doors--south').click(function() {
       $('i.hero').remove();
       moveHero.moveHeroSouth();
+      moveHeroPreparation();
     });
 
-    /*$('i.pathDoors').click(function() {
-      if ( /hero is not in the room/ )  {
-        $('i.pathDoors').css('pointer-events', 'none');
-      }
-    });*/
+    $('i.doors--east').click(function() {
+      $('i.hero').remove();
+      moveHero.moveHeroEast();
+      moveHeroPreparation();
+    });
 
+    $('i.doors--west').click(function() {
+      $('i.hero').remove();
+      moveHero.moveHeroWest();
+      moveHeroPreparation();
+    });
+
+    function moveHeroPreparation(){
+      toggleHeroInsideClass();
+      blockUnusedDoors();
+      openUsedDoors();
+    }
+
+    function toggleHeroInsideClass() {
+      $('div.tile__centre').removeClass("heroInside");
+      $( "div.tile__centre:has(i.hero)" ).addClass( "heroInside" );
+    }
+
+    function blockUnusedDoors(){
+      //$("div.tile--inside:not(:has(div.tile__centre.heroInside))").css("pointer-events", "none");
+    }
+
+    function openUsedDoors(){
+      //$("tile--inside  div.tile--inside:has(div.tile__centre.heroInside)").css("pointer-events", "auto");
+    }
 });

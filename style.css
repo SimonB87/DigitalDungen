@@ -58,7 +58,11 @@ div.board > div.tile > div.tile--inside{
 div.board > div.tile > div.tile--inside i {
   cursor: pointer;
 }
-
+/*test block doors*/
+div.board > div.tile:not(i.heroInside) > div.tile--inside i {
+  /*pointer-events: none;*/
+}
+/*test block doors*/
 div.board > div.tile > div.tile__doors--enter {
   color: #fff;
 }
