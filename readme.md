@@ -5,7 +5,7 @@ A JavaScript dungeon crawler
 ### Info:
 
 - Game for testing OOP application in JavaScript.
-- Play the current version [live](http://simonburyan.cz/digitaldungeon/)
+- Play the current version [LIVE CLICK HERE!](http://simonburyan.cz/digitaldungeon/)
 
 ### Description:
 
