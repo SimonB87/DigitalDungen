@@ -13,7 +13,7 @@ A JavaScript dungeon crawler
 
 - [x] Dungeon - map of 5 x 5 tiles.
 
-- [ ] Danger - the player can run into monsters.
+- [x] Danger - the player can run into monsters.
 
 - [ ] Monsters - a different or unsafe verve that wants to fight a hero. People have 3 levels and appear in a specific part of the dungeon.
 
