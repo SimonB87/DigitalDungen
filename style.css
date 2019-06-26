@@ -5,15 +5,61 @@
 
 body {
   overflow: auto;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 header {
   text-align: center;
 }
 
+#gameResultStatement{
+  color: red;
+}
+
 header button {
   margin: 10px auto;
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+
+header button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+header button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+header button:hover span {
+  padding-right: 25px;
+}
+
+header button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+header button#start {
+  background-color: #f4511e;
+  color: #FFFFFF;
+}
+
 
 header h1{
   text-align: center;
@@ -71,11 +117,38 @@ div.board > div.tile > div.tile__doors--exit {
   color: #fff;
 }
 
-div.board > div.tile > div.tile__centre > i.hero{
-  color: orange;
-  font-size: 150%;
+.doorBlocked {
+  pointer-events: none;
+  opacity: 0.25;
 }
 
-div.board > div.tile > div.tile__centre > i.monster{
-  font-size: 200%;
+.pathDoors{
+  cursor: pointer;
+}
+
+.hidden{
+  pointer-events: none;
+  opacity: 0.0;
+}
+
+@media screen and (max-width: 800px) {
+  div.board > div.tile > div.tile__centre > i.hero{
+    color: orange;
+    font-size: 3vw;
+  }
+
+  div.board > div.tile > div.tile__centre > i.monster{
+    font-size: 5vw;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  div.board > div.tile > div.tile__centre > i.hero{
+    color: orange;
+    font-size: 140%;
+  }
+
+  div.board > div.tile > div.tile__centre > i.monster{
+    font-size: 155%;
+  }
 }
