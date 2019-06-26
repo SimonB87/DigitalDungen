@@ -22,6 +22,7 @@ $(document).ready(function(){
 
     $('button#start').click(function() {
       $('i.hero').remove();
+      hero.position = ".x1.y1";
       $(hero.position + " .tile__centre").prepend( hero.heroAvatar );
       blink_hero_icon();
       blockUnusedDoors();
@@ -98,11 +99,14 @@ $(document).ready(function(){
 
         function printResult(){
           document.getElementById("gameResultStatement").innerHTML = 'You are the winner!!!';
+            document.getElementById("gameResultStatement").style.backgroundColor = "grey";
           postResult();
           postResult();
           postResult();
           postResult();
         }
+
+        $('i.pathDoors').addClass("doorBlocked");
 
         setTimeout(printResult(), 300);
       }
