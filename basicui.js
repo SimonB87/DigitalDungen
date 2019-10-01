@@ -27,43 +27,34 @@ $(document).ready(function(){
 
     $('i.doors--north').click(function() {
       $("body").find("i.hero").remove();
-      console.log("removed hero");
       moveHero.moveHeroNorth();
       moveHeroPreparation();
     });
 
     $('i.doors--south').click(function() {
       $("body").find("i.hero").remove();
-      console.log("removed hero");
       moveHero.moveHeroSouth();
       moveHeroPreparation();
     });
 
     $('i.doors--east').click(function() {
       $("body").find("i.hero").remove();
-      console.log("removed hero");
       moveHero.moveHeroEast();
       moveHeroPreparation();
     });
 
     $('i.doors--west').click(function() {
       $("body").find("i.hero").remove();
-      console.log("removed hero");
       moveHero.moveHeroWest();
       moveHeroPreparation();
     });
-
-      function blink_hero_icon() {
-        $("body").find("i.hero").fadeOut(500);
-        $("body").find("i.hero").fadeIn(500);
-    };
 
     function blink_monster_icon() {
         $('.monster').fadeOut(250);
         $('.monster').fadeIn(250);
         $('.monster').fadeOut(250);
         $('.monster').fadeIn(250);
-    };
+    }
 
     function moveHeroPreparation(){
       toggleHeroInsideClass();
@@ -74,6 +65,11 @@ $(document).ready(function(){
       checkForVictory();
       blink_hero_icon();
     }
+
+    function blink_hero_icon() {
+      $("body").find("i.hero").fadeOut(500);
+      $("body").find("i.hero").fadeIn(500);
+  }
 });
 
 
@@ -111,18 +107,10 @@ function checkForVictory(){
   var heroPosition = ".x" + hero.position.x + ".y" + hero.position.y;
   if ( heroPosition == ".x5.y5" ) {
 
-    function postResult(){
-      $('#gameResultStatement').fadeOut(250);
-      $('#gameResultStatement').fadeIn(250);
-    }
 
     function printResult(){
-      document.getElementById("gameResultStatement").innerHTML = 'You are the winner!!!';
-        document.getElementById("gameResultStatement").style.backgroundColor = "grey";
-      postResult();
-      postResult();
-      postResult();
-      postResult();
+      document.getElementById("myModal--notice").innerHTML = 'You are the winner!!!';
+      document.getElementById("modalButton").click();
     }
 
     $('i.pathDoors').addClass("doorBlocked");
