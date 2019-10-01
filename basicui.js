@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-    setTileHeight();
+  correctionOfBoardSize();
 
     $(window).resize(function() {
-      setTileHeight();
+      correctionOfBoardSize();
     });
 
     //prepare the map
@@ -72,10 +72,31 @@ $(document).ready(function(){
   }
 });
 
+function correctionOfBoardSize(){
+  var windowHeight = window.innerHeight,
+      windowWidth = window.innerWidth,
+      headerHeight = document.querySelector("header").offsetHeight,
+      boardHeight = document.querySelector("#board").offsetHeight,
+      boardWidth = document.querySelector("#board").offsetWidth,
+      windowHeightDiff = windowHeight - headerHeight - boardHeight,
+      windowWidthDiff = windowWidth - boardWidth;
 
-function setTileHeight(){
-  var tileWidth = $(".tile").css("width");
-  $("div.tile").css("height", tileWidth);
+  if (windowHeightDiff > 0) {
+    var boardWidth = $("#board").css("width");
+    $("#board").css("height", boardWidth);
+  } else {
+    var maximumBoardSideLength = windowHeight - headerHeight;
+    $("#board").css("height", maximumBoardSideLength).css("width", maximumBoardSideLength);
+  }
+
+  if (windowWidthDiff < 0) {
+    var maxWidth = $("#mainContainer").css("width");
+    $("#board").css("height", maxWidth).css("width", maxWidth);
+  } else {
+    var maximumBoardSideLength = windowHeight - headerHeight;
+    $("#board").css("height", maximumBoardSideLength).css("width", maximumBoardSideLength);
+  }
+
 }
 
 function toggleHeroInsideClass() {
