@@ -11,10 +11,7 @@ function runTest(steps){
             var selector = ".tile.x" + i + ".y1 i.doors--south";
 
             setTimeout(function(){ 
-                $(document).ready(function(){
-                    $(selector).click(); 
-                    console.log("interval " + interval); 
-                  });
+                document.querySelector(selector).click();
             }, interval);
         } 
         
