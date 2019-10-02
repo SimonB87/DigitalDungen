@@ -1,0 +1,22 @@
+{
+  "name": "digitaldungen",
+  "version": "1.0.0",
+  "description": "DigitalDungeon",
+  "main": "basicui.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonB87/DigitalDungen.git"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "SimonB87",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimonB87/DigitalDungen/issues"
+  },
+  "homepage": "https://github.com/SimonB87/DigitalDungen#readme"
+}

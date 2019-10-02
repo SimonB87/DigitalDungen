@@ -130,6 +130,10 @@ function checkForVictory(){
 
 
     function printResult(){
+      /* $('#myModal').modal({
+        backdrop: 'static',
+        keyboard: false
+      }); */
       document.getElementById("myModal--notice").innerHTML = 'You are the winner!!!';
       document.getElementById("modalButton").click();
     }

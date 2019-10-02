@@ -1,0 +1,155 @@
+* {
+  padding: 0 0;
+  margin: 0 0;
+}
+body {
+  overflow: auto;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+body header {
+  text-align: center;
+}
+body header h1 {
+  text-align: center;
+}
+body header h2 {
+  color: green;
+}
+body header #gameResultStatement {
+  color: red;
+  padding: 5px;
+}
+body header button {
+  margin: 10px auto;
+  display: inline-block;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+body header button#start {
+  background-color: #f4511e;
+  color: #FFFFFF;
+}
+body header button:hover span {
+  padding-right: 25px;
+}
+body header button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+body header button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+body header button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+body .container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+body .container .board {
+  width: 100%;
+  margin: 0 auto;
+}
+body .container .board .tile {
+  width: 20%;
+  height: 20%;
+  border: 5px solid rgba(255, 0, 0, 0.1);
+  background-color: green;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+body .container .board .tile .tile__centre > i.hero {
+  color: orange;
+}
+body .container .board .tile .tile__doors--enter {
+  color: #fff;
+}
+body .container .board .tile .tile__doors--exit {
+  color: #fff;
+}
+body .container .board .tile .doorBlocked {
+  pointer-events: none;
+  opacity: 0.25;
+}
+body .container .board .tile .tile--inside {
+  width: 33%;
+  height: 33%;
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+}
+body .container .board .tile .tile--inside i {
+  cursor: pointer;
+}
+body .container .board .tile .pathDoors {
+  cursor: pointer;
+}
+body .container .board .tile .hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+body .container footer {
+  padding: 20px 20px;
+}
+body .container footer > ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+body .container footer > ul > li > a {
+  font-size: 200%;
+}
+body .container footer a {
+  text-decoration: none;
+}
+body .modal-content .modal-header {
+  border-bottom: 0;
+  padding: 1rem 1rem 0 1rem;
+}
+body .modal-content .modal-body {
+  height: 21vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  body div.board > div.tile > div.tile__centre > i.hero {
+    font-size: 3vw;
+  }
+  body div.board > div.tile > div.tile__centre > i.monster {
+    font-size: 5vw;
+  }
+}
+@media screen and (min-width: 801px) {
+  body div.board > div.tile > div.tile__centre > i.hero {
+    font-size: 140%;
+  }
+  body div.board > div.tile > div.tile__centre > i.monster {
+    font-size: 155%;
+  }
+}
