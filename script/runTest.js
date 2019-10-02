@@ -1,39 +1,23 @@
-//runTest(4);
+//Test for walk through the labyrint.
+makeOneStep(1);
+makeOneStep(2);
+makeOneStep(3);
+makeOneStep(4);
 
-function runTest(steps){
+function makeOneStep(step){
+    //prepare way South
+    var intervalToSouth = step * 250 + 500;
+    var selectorToSouth = ".tile.x1.y"+ step +" i.doors--south";
     
     setTimeout(function(){ 
-        document.getElementById("start").click();
+        document.querySelector(selectorToSouth).click();
+    }, intervalToSouth);
 
-        for (var i = 1; i <= steps; i++) {
-
-            var interval = i * 250 + 500;
-            var selector = ".tile.x1.y"+i+" i.doors--south";
-
-            setTimeout(function(){ 
-                $(document).ready(function(){
-                    $(selector).click(); 
-                    console.log("interval " + interval); 
-                  });
-                /* document.querySelector(selector).click(); */
-
-            }, interval);
-        } 
-
-        for (var i = 1; i <= steps; i++) {
-
-            var interval = i * 250 + 2000;
-            var selector = ".tile.x"+i+".y5"+ i +" i.doors--east";
-
-            setTimeout(function(){
-                $(document).ready(function(){
-                    $(selector).click(); 
-                    console.log("interval " + interval); 
-                  }); 
-                /* document.querySelector(selector).click(); */
-            }, interval);
-        } 
-        
-    }, 1000);
-
+    //prepare way East
+    var intervalToEast = intervalToSouth + 1000;
+    var selectorToEast = ".tile.x"+ step + ".y5 i.doors--east";
+    
+    setTimeout(function(){ 
+        document.querySelector(selectorToEast).click();
+    }, intervalToEast);
 }
