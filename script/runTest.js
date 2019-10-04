@@ -1,8 +1,10 @@
 //Test for walk through the labyrint.
-/* makeOneStep(1);
-makeOneStep(2);
-makeOneStep(3);
-makeOneStep(4); */
+function runTest() {
+  makeOneStep(1);
+  makeOneStep(2);
+  makeOneStep(3);
+  makeOneStep(4);
+}
 
 function makeOneStep(step) {
   //prepare way South

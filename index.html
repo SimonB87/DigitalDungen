@@ -19,8 +19,9 @@
   <header>
     <h1>DigitalDungeon the JavaScript Game</h1>
     <h2>Notice: <span id="gameResultStatement"></span><h2>
-    <button id="start" onclick=""><span>Start! </span> </button>
-  </header>
+    <button id="start"><span>Start! </span> </button>
+    <button id="runTest" onclick="runTest();"><span>Run a Test! </span> </button>
+    </header>
   <div id="board" class="board">
     <div class="tile x1 y1">
 
@@ -433,7 +434,11 @@
           </button>
         </div>
         <div class="modal-body">
-          <span id="myModal--notice"></span>
+          <div class="modal-body--sectionOne">
+            <span id="myModal--notice"></span>
+          </div>
+          <div class="modal-body--sectionTwo">
+          </div>
         </div>
 
       </div>
