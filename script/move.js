@@ -10,28 +10,13 @@ hero = {
 };
 
 moveHero = {
-  heroPosition: "",
-  getHeroPosition: function() {
-    this.heroPosition = ".x" + hero.position.x + ".y" + hero.position.y;
-  },
   placeHeroOnMap: function() {
-    this.getHeroPosition();
-    $(this.heroPosition + " .tile__centre").prepend(hero.heroAvatar);
+    var heroPosition = hero.buildHeroPosition();
+    $(heroPosition + " .tile__centre").prepend(hero.heroAvatar);
   },
-  moveHeroNorth: function() {
-    hero.position.y = hero.position.y - 1;
-    this.placeHeroOnMap();
-  },
-  moveHeroSouth: function() {
-    hero.position.y = hero.position.y + 1;
-    this.placeHeroOnMap();
-  },
-  moveHeroEast: function() {
-    hero.position.x = hero.position.x + 1;
-    this.placeHeroOnMap();
-  },
-  moveHeroWest: function() {
-    hero.position.x = hero.position.x - 1;
+  moveHero: function(xAxis, yAxis) {
+    xAxis !== 0 ? (hero.position.x = hero.position.x + xAxis) : null;
+    yAxis !== 0 ? (hero.position.y = hero.position.y + yAxis) : null;
     this.placeHeroOnMap();
   }
 };

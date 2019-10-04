@@ -12,9 +12,7 @@ $(document).ready(function() {
     hero.position.x = hero.position.y = 1;
     var heroPosition = hero.buildHeroPosition();
 
-    $("body")
-      .find("i.hero")
-      .remove();
+    $("i.hero").remove();
 
     $(heroPosition + " .tile__centre").prepend(hero.heroAvatar);
     blinkHeroIcon();
@@ -26,28 +24,26 @@ $(document).ready(function() {
   $("i.pathDoors").click(function() {
     var destination = $(this).attr("doorsToDirection");
 
-    $("body")
-      .find("i.hero")
-      .remove();
+    $("i.hero").remove();
 
     if (destination === "north") {
-      moveHero.moveHeroNorth();
+      moveHero.moveHero(0, -1);
     } else if (destination === "south") {
-      moveHero.moveHeroSouth();
+      moveHero.moveHero(0, +1);
     } else if (destination === "east") {
-      moveHero.moveHeroEast();
+      moveHero.moveHero(+1, 0);
     } else if (destination === "west") {
-      moveHero.moveHeroWest();
+      moveHero.moveHero(+1, 0);
     }
 
-    moveHeroPreparation();
+    moveHeroEvaluation();
   });
 
-  function moveHeroPreparation() {
+  function moveHeroEvaluation() {
     toggleHeroInsideClass();
     prepareRooms();
     checkForVictory();
-    blinkHeroIcon();
+    blinkHeroIcon(500);
 
     function toggleHeroInsideClass() {
       $("div.tile__centre").removeClass("heroInside");
@@ -55,11 +51,10 @@ $(document).ready(function() {
     }
   }
 
-  function blinkHeroIcon() {
-    $("body")
-      .find("i.hero")
-      .fadeOut(500)
-      .fadeIn(500);
+  function blinkHeroIcon(time) {
+    $("i.hero")
+      .fadeOut(time)
+      .fadeIn(time);
   }
 });
 
