@@ -18,11 +18,8 @@ $(document).ready(function() {
       .remove();
 
     $(heroPosition + " .tile__centre").prepend(hero.heroAvatar);
-    blink_hero_icon();
-    blockUnusedDoors();
-    openUsedDoors();
-    hideMonsters();
-    showMonsters();
+    blinkHeroIcon();
+    prepareRooms();
   });
 
   //After clicking doors move hero
@@ -49,15 +46,17 @@ $(document).ready(function() {
 
   function moveHeroPreparation() {
     toggleHeroInsideClass();
-    blockUnusedDoors();
-    openUsedDoors();
-    hideMonsters();
-    showMonsters();
+    prepareRooms();
     checkForVictory();
-    blink_hero_icon();
+    blinkHeroIcon();
+
+    function toggleHeroInsideClass() {
+      $("div.tile__centre").removeClass("heroInside");
+      $("div.tile__centre:has(i.hero)").addClass("heroInside");
+    }
   }
 
-  function blink_hero_icon() {
+  function blinkHeroIcon() {
     $("body")
       .find("i.hero")
       .fadeOut(500);
@@ -99,29 +98,8 @@ function correctionOfBoardSize() {
   }
 }
 
-function toggleHeroInsideClass() {
-  $("div.tile__centre").removeClass("heroInside");
-  $("div.tile__centre:has(i.hero)").addClass("heroInside");
-}
-
-function blockUnusedDoors() {
-  $("i.pathDoors").addClass("doorBlocked");
-}
-
 function hideMonsters() {
   $("i.monster").addClass("hidden");
-}
-
-function openUsedDoors() {
-  var heroPosition = hero.buildHeroPosition(),
-    selector = "div" + heroPosition + "> div > i.pathDoors";
-  $(selector).removeClass("doorBlocked");
-}
-
-function showMonsters() {
-  var heroPosition = hero.buildHeroPosition(),
-    selector = "div" + heroPosition + "> div.tile__centre > i.monster";
-  $(selector).removeClass("hidden");
 }
 
 function checkForVictory() {
@@ -140,5 +118,28 @@ function checkForVictory() {
     $("i.pathDoors").addClass("doorBlocked");
 
     setTimeout(printResult(), 300);
+  }
+}
+
+function prepareRooms() {
+  blockUnusedDoors();
+  openUsedDoors();
+  hideMonsters();
+  showMonsters();
+
+  function blockUnusedDoors() {
+    $("i.pathDoors").addClass("doorBlocked");
+  }
+
+  function openUsedDoors() {
+    var heroPosition = hero.buildHeroPosition(),
+      selector = "div" + heroPosition + "> div > i.pathDoors";
+    $(selector).removeClass("doorBlocked");
+  }
+
+  function showMonsters() {
+    var heroPosition = hero.buildHeroPosition(),
+      selector = "div" + heroPosition + "> div.tile__centre > i.monster";
+    $(selector).removeClass("hidden");
   }
 }
