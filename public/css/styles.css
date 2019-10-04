@@ -79,8 +79,8 @@ body .container .board {
 body .container .board .tile {
   width: 20%;
   height: 20%;
-  background-color: green;
-  background-image: url("../pics/tile.jpg");
+  background-color: #e3d2b7;
+  background-image: url("../../pics/tile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -94,7 +94,7 @@ body .container .board .tile {
   align-content: space-around;
 }
 body .container .board .tile[tiletype="finish"] {
-  background-image: url("../pics/tileFinish.jpg");
+  background-image: url("../../pics/tileFinish.jpg");
 }
 body .container .board .tile .tile__centre > i.hero {
   color: orange;
