@@ -151,6 +151,11 @@ body .modal-content .modal-body--sectionOne {
   justify-content: center;
   align-items: center;
 }
+body .modal-content .modal-exit {
+  color: red;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: red;
+}
 @media screen and (max-width: 800px) {
   body div.board > div.tile > div.tile__centre > i.hero {
     font-size: 3vw;
