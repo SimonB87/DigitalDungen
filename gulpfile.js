@@ -11,16 +11,8 @@ gulp.task("less", function() {
         paths: [path.join(__dirname, "less", "includes")]
       })
     )
-    .pipe(gulp.dest("./public/css"));
+    .pipe(gulp.dest("./style/css"));
 });
-
-/* gulp.task("run", ["less"]);
-
-gulp.task("watch", function() {
-  gulp.watch("./style/*.less", ["less"]);
-});
-
-gulp.task("default", ["run", "watch"]); */
 
 gulp.task("default", run, watch);
 
