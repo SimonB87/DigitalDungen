@@ -12,6 +12,8 @@
 body {
   overflow: auto;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  background-color: #ddc7a6; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, #ddc7a6, #9a8b74);
   header {
     text-align: center;
 
@@ -93,8 +95,14 @@ body {
       .tile {
         width: 20%;
         height: 20%;
-        border: 0.3125rem solid rgba(255, 0, 0, 0.1);
+
+        //border: 0.3125rem solid rgba(255, 0, 0, 0.1);
         background-color: green;
+        background-image: url("../pics/tile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
         float: left;
         box-sizing: border-box;
 
@@ -106,12 +114,13 @@ body {
         align-content: space-around;
 
         &[tiletype="finish"] {
-          border: 0.3125rem solid rgba(255, 0, 0, 0.1);
-          background-color: @orangeColor;
+          background-image: url("../pics/tileFinish.jpg");
         }
 
         .tile__centre > i.hero {
           color: orange;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #000;
         }
 
         .tile__doors--enter {
