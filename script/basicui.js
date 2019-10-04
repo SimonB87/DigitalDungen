@@ -58,9 +58,7 @@ $(document).ready(function() {
   function blinkHeroIcon() {
     $("body")
       .find("i.hero")
-      .fadeOut(500);
-    $("body")
-      .find("i.hero")
+      .fadeOut(500)
       .fadeIn(500);
   }
 });
@@ -97,26 +95,23 @@ function correctionOfBoardSize() {
   }
 }
 
-function hideMonsters() {
-  $("i.monster").addClass("hidden");
-}
-
 function checkForVictory() {
   var heroPosition = hero.buildHeroPosition();
+
   if (heroPosition == ".x5.y5") {
-    function printResult() {
-      $("#myModal").modal({
-        backdrop: "static",
-        keyboard: false
-      });
-      document.getElementById("myModal--notice").innerHTML =
-        "You are the winner!!!";
-      document.getElementById("modalButton").click();
-    }
-
-    $("i.pathDoors").addClass("doorBlocked");
-
     setTimeout(printResult(), 300);
+    blockUnusedDoors();
+
+    document.getElementById("myModal--notice").innerHTML =
+      "You are the winner!!!";
+    document.getElementById("modalButton").click();
+  }
+
+  function printResult() {
+    $("#myModal").modal({
+      backdrop: "static",
+      keyboard: false
+    });
   }
 }
 
@@ -127,10 +122,6 @@ function prepareRooms() {
   hideMonsters();
   showMonsters(heroPosition);
 
-  function blockUnusedDoors() {
-    $("i.pathDoors").addClass("doorBlocked");
-  }
-
   function openUsedDoors(heroPositionValue) {
     var selector = "div" + heroPositionValue + "> div > i.pathDoors";
     $(selector).removeClass("doorBlocked");
@@ -140,4 +131,12 @@ function prepareRooms() {
     var selector = "div" + heroPositionValue + "> div.tile__centre > i.monster";
     $(selector).removeClass("hidden");
   }
+}
+
+function hideMonsters() {
+  $("i.monster").addClass("hidden");
+}
+
+function blockUnusedDoors() {
+  $("i.pathDoors").addClass("doorBlocked");
 }
