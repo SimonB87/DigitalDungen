@@ -11,7 +11,7 @@ $(document).ready(function() {
   $("button#start").click(function() {
     hero.position.x = 1;
     hero.position.y = 1;
-    var heroPosition = ".x" + hero.position.x + ".y" + hero.position.y;
+    var heroPosition = hero.buildHeroPosition();
 
     $("body")
       .find("i.hero")
@@ -23,7 +23,6 @@ $(document).ready(function() {
     openUsedDoors();
     hideMonsters();
     showMonsters();
-    setTimeout(blink_monster_icon(), 100);
   });
 
   //After clicking doors move hero
@@ -47,13 +46,6 @@ $(document).ready(function() {
 
     moveHeroPreparation();
   });
-
-  function blink_monster_icon() {
-    $(".monster").fadeOut(250);
-    $(".monster").fadeIn(250);
-    $(".monster").fadeOut(250);
-    $(".monster").fadeIn(250);
-  }
 
   function moveHeroPreparation() {
     toggleHeroInsideClass();
@@ -121,19 +113,19 @@ function hideMonsters() {
 }
 
 function openUsedDoors() {
-  var heroPosition = ".x" + hero.position.x + ".y" + hero.position.y,
+  var heroPosition = hero.buildHeroPosition(),
     selector = "div" + heroPosition + "> div > i.pathDoors";
   $(selector).removeClass("doorBlocked");
 }
 
 function showMonsters() {
-  var heroPosition = ".x" + hero.position.x + ".y" + hero.position.y,
+  var heroPosition = hero.buildHeroPosition(),
     selector = "div" + heroPosition + "> div.tile__centre > i.monster";
   $(selector).removeClass("hidden");
 }
 
 function checkForVictory() {
-  var heroPosition = ".x" + hero.position.x + ".y" + hero.position.y;
+  var heroPosition = hero.buildHeroPosition();
   if (heroPosition == ".x5.y5") {
     function printResult() {
       $("#myModal").modal({
