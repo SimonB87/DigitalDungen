@@ -9,8 +9,7 @@ $(document).ready(function() {
   hideMonsters();
 
   $("button#start").click(function() {
-    hero.position.x = 1;
-    hero.position.y = 1;
+    hero.position.x = hero.position.y = 1;
     var heroPosition = hero.buildHeroPosition();
 
     $("body")
@@ -122,24 +121,23 @@ function checkForVictory() {
 }
 
 function prepareRooms() {
+  var heroPosition = hero.buildHeroPosition();
   blockUnusedDoors();
-  openUsedDoors();
+  openUsedDoors(heroPosition);
   hideMonsters();
-  showMonsters();
+  showMonsters(heroPosition);
 
   function blockUnusedDoors() {
     $("i.pathDoors").addClass("doorBlocked");
   }
 
-  function openUsedDoors() {
-    var heroPosition = hero.buildHeroPosition(),
-      selector = "div" + heroPosition + "> div > i.pathDoors";
+  function openUsedDoors(heroPositionValue) {
+    var selector = "div" + heroPositionValue + "> div > i.pathDoors";
     $(selector).removeClass("doorBlocked");
   }
 
-  function showMonsters() {
-    var heroPosition = hero.buildHeroPosition(),
-      selector = "div" + heroPosition + "> div.tile__centre > i.monster";
+  function showMonsters(heroPositionValue) {
+    var selector = "div" + heroPositionValue + "> div.tile__centre > i.monster";
     $(selector).removeClass("hidden");
   }
 }
