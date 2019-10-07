@@ -15,9 +15,6 @@ body header {
 body header h1 {
   text-align: center;
 }
-body header h2 {
-  color: green;
-}
 body header #gameResultStatement {
   color: red;
   padding: 0.33rem;
