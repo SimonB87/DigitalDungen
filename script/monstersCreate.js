@@ -3,6 +3,7 @@ function Monster(type, strenght, deffence) {
   this.strenght = strenght;
   this.deffence = deffence;
   this.hitPoints = 100;
+  this.monsterStatus = "hidden";
   this.position = {
     x: "",
     y: ""
