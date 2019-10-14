@@ -2,22 +2,6 @@ monstersSpawn = {
   locations: [],
   randomOrder: [],
   shuffledLocations: [],
-  monstersArray: [
-    "dragon1",
-    "dragon2",
-    "dragon3",
-    "dragon4",
-    "crawler1",
-    "crawler2",
-    "crawler3",
-    "crawler4",
-    "crawler5",
-    "crawler6",
-    "crawler7",
-    "mouse1",
-    "mouse2",
-    "mouse3"
-  ],
   getAllLocations: function() {
     const SELECTOR_ALL_TILES = document.querySelectorAll("#board .tile");
     let numberOfTiles = SELECTOR_ALL_TILES.length;
