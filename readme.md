@@ -14,17 +14,21 @@ A JavaScript dungeon crawler
 
 - [x] Dungeon - map of 4 x 4 tiles.
 
-- [x] Danger - the player can run into monsters.
+- [ ] Danger - the player can run into monsters. Monsters are hidden and reveal only, if hero enters their room.
 
 - [X] Monsters - beasts that fight with the hero. In a room there can be ususally one monster.
 
 - [X] Discover dungeon - the hero passes the map. He can proceed in four directions (East, South, West, North).
 
-- [ ] Target - hero has to go to the end of the game area.
+- [X] Target - hero has to go to the end of the game area.
 
-- [ ] Action - round starts by playing the square on the square. If a monster appears in front of him, he can throw me bait and fight or fight her.
+- [ ] Hero hit points - hero has 3 God Blessings, which can regenerate him 3 times, if his hit points went to 0. Hero can use points for minor healing.
 
-- [ ] Fighting the monster -
+- [ ] Action - round starts by appearing on the given square on the square. If a monster appears in front of hero, he can fight he monster or flight.
+
+- [ ] Fighting the monster - Monster attacks first. Hero can fight back or heal himself. The battle ends with monster or hero defeated.
+
+- [ ] Treasures - hero can loot momnster treasures, which consist of points, armor and weapons.
 
 ### Link:
 
