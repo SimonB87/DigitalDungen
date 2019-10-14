@@ -12,13 +12,13 @@ A JavaScript dungeon crawler
 
 - [x] Hero - a player venturing through the dungeon.
 
-- [x] Dungeon - map of 5 x 5 tiles.
+- [x] Dungeon - map of 4 x 4 tiles.
 
 - [x] Danger - the player can run into monsters.
 
-- [ ] Monsters - a different or unsafe verve that wants to fight a hero. People have 3 levels and appear in a specific part of the dungeon.
+- [X] Monsters - beasts that fight with the hero. In a room there can be ususally one monster.
 
-- [ ] Survey - the hero passes the map. It can proceed in four directions. If he is alone in the place.
+- [X] Discover dungeon - the hero passes the map. He can proceed in four directions (East, South, West, North).
 
 - [ ] Target - hero has to go to the end of the game area.
 
