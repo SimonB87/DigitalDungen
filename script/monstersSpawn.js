@@ -39,7 +39,6 @@ monstersSpawn = {
         this.locations.push(result);
       }
     }
-    //console.log(this.locations);
   },
   selectRandomOrder: function() {
     const numberOfTilesOnBoard =
@@ -57,7 +56,6 @@ monstersSpawn = {
       this.randomOrder.push(originalOrder[randomNumber]);
       originalOrder.splice(randomNumber, 1);
     }
-    //console.log(this.randomOrder);
   },
   setRamdonPositions: function() {
     let initialPositions = this.locations;
@@ -67,7 +65,7 @@ monstersSpawn = {
     for (let k = 0; k < initialPositions.length; k++) {
       resultPositionOrder.push(initialPositions[initialSortOrder[k]]);
     }
-    console.log(resultPositionOrder);
+
     this.shuffledLocations = resultPositionOrder;
   }
 };
