@@ -17,33 +17,25 @@ $(document).ready(function() {
     $(heroPosition + " .tile__centre").prepend(hero.heroAvatar);
 
     setRandomPositions();
-    console.log(monstersSpawn.monstersArray);
 
     blinkHeroIcon();
     prepareRooms();
 
     function setRandomPositions() {
-      monstersObject.dragon1.position = monstersSpawn.location[13];
-      monstersObject.dragon2.position =
-        monstersSpawn.location[monstersSpawn.randomOrder[1]];
-      monstersObject.dragon3.position =
-        monstersSpawn.location[monstersSpawn.randomOrder[2]];
-      monstersObject.dragon4.position =
-        monstersSpawn.location[monstersSpawn.randomOrder[3]];
-      monstersObject.crawler1.position =
-        monstersSpawn.location[monstersSpawn.randomOrder[4]];
-      monstersObject.crawler2.position =
-        monstersSpawn.location[monstersSpawn.randomOrder[5]];
-      monstersObject.crawler3.position =
-        monstersSpawn.location[monstersSpawn.randomOrder[6]];
-      monstersObject.crawler4.position =
-        monstersSpawn.location[monstersSpawn.randomOrder[7]];
-      monstersObject.crawler5.position =
-        monstersSpawn.location[monstersSpawn.randomOrder[8]];
-      monstersObject.crawler6.position =
-        monstersSpawn.location[monstersSpawn.randomOrder[9]];
-      monstersObject.crawler7.position =
-        monstersSpawn.location[monstersSpawn.randomOrder[10]];
+      monstersObject.dragon1.position = monstersSpawn.shuffledLocations[0];
+      monstersObject.dragon2.position = monstersSpawn.shuffledLocations[1];
+      monstersObject.dragon3.position = monstersSpawn.shuffledLocations[2];
+      monstersObject.dragon4.position = monstersSpawn.shuffledLocations[3];
+      monstersObject.crawler1.position = monstersSpawn.shuffledLocations[4];
+      monstersObject.crawler2.position = monstersSpawn.shuffledLocations[5];
+      monstersObject.crawler3.position = monstersSpawn.shuffledLocations[6];
+      monstersObject.crawler4.position = monstersSpawn.shuffledLocations[7];
+      monstersObject.crawler5.position = monstersSpawn.shuffledLocations[8];
+      monstersObject.crawler6.position = monstersSpawn.shuffledLocations[9];
+      monstersObject.crawler7.position = monstersSpawn.shuffledLocations[10];
+      monstersObject.mouse1.position = { x: 2, y: 1 };
+      monstersObject.mouse2.position = { x: 1, y: 2 };
+      monstersObject.mouse3.position = { x: 2, y: 2 };
     }
   });
 
