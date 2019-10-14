@@ -15,8 +15,36 @@ $(document).ready(function() {
     $("i.hero").remove();
 
     $(heroPosition + " .tile__centre").prepend(hero.heroAvatar);
+
+    setRandomPositions();
+    console.log(monstersSpawn.monstersArray);
+
     blinkHeroIcon();
     prepareRooms();
+
+    function setRandomPositions() {
+      monstersObject.dragon1.position = monstersSpawn.location[13];
+      monstersObject.dragon2.position =
+        monstersSpawn.location[monstersSpawn.randomOrder[1]];
+      monstersObject.dragon3.position =
+        monstersSpawn.location[monstersSpawn.randomOrder[2]];
+      monstersObject.dragon4.position =
+        monstersSpawn.location[monstersSpawn.randomOrder[3]];
+      monstersObject.crawler1.position =
+        monstersSpawn.location[monstersSpawn.randomOrder[4]];
+      monstersObject.crawler2.position =
+        monstersSpawn.location[monstersSpawn.randomOrder[5]];
+      monstersObject.crawler3.position =
+        monstersSpawn.location[monstersSpawn.randomOrder[6]];
+      monstersObject.crawler4.position =
+        monstersSpawn.location[monstersSpawn.randomOrder[7]];
+      monstersObject.crawler5.position =
+        monstersSpawn.location[monstersSpawn.randomOrder[8]];
+      monstersObject.crawler6.position =
+        monstersSpawn.location[monstersSpawn.randomOrder[9]];
+      monstersObject.crawler7.position =
+        monstersSpawn.location[monstersSpawn.randomOrder[10]];
+    }
   });
 
   //After clicking doors move hero
@@ -92,11 +120,13 @@ function correctionOfBoardSize() {
 
 function checkForVictory() {
   var heroPosition = hero.buildHeroPosition();
-  const finishTile = document.querySelector("#board .tile[tiletype=finish]").getAttribute("class");//"tile x4 y4"
+  const finishTile = document
+    .querySelector("#board .tile[tiletype=finish]")
+    .getAttribute("class"); //"tile x4 y4"
   const finishTileX = finishTile[6];
   const finishTileY = finishTile[9];
-  const finishTileCooordinates = ".x" + finishTileX +".y" + finishTileY;
-  
+  const finishTileCooordinates = ".x" + finishTileX + ".y" + finishTileY;
+
   //.x5.y5
   if (heroPosition == finishTileCooordinates) {
     setTimeout(printResult(), 300);
