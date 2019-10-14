@@ -33,9 +33,9 @@ $(document).ready(function() {
       monstersObject.crawler5.position = monstersSpawn.shuffledLocations[8];
       monstersObject.crawler6.position = monstersSpawn.shuffledLocations[9];
       monstersObject.crawler7.position = monstersSpawn.shuffledLocations[10];
-      monstersObject.mouse1.position = { x: 2, y: 1 };
-      monstersObject.mouse2.position = { x: 1, y: 2 };
-      monstersObject.mouse3.position = { x: 2, y: 2 };
+      monstersObject.frog1.position = { x: 2, y: 1 };
+      monstersObject.frog2.position = { x: 1, y: 2 };
+      monstersObject.frog3.position = { x: 2, y: 2 };
     }
   });
 

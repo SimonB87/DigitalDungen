@@ -27,7 +27,7 @@ let monstersObject = {
   crawler5: new Monster("Crawler", 4, 3),
   crawler6: new Monster("Crawler", 4, 3),
   crawler7: new Monster("Crawler", 4, 3),
-  mouse1: new Monster("Mouse", 2, 1),
-  mouse2: new Monster("Mouse", 2, 1),
-  mouse3: new Monster("Mouse", 2, 1)
+  frog1: new Monster("Frog", 2, 1),
+  frog2: new Monster("Frog", 2, 1),
+  frog3: new Monster("Frog", 2, 1)
 };
