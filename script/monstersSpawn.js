@@ -22,6 +22,7 @@ monstersSpawn = {
     const SELECTOR_ALL_TILES = document.querySelectorAll("#board .tile");
     let numberOfTiles = SELECTOR_ALL_TILES.length;
     for (let i = 1; i < numberOfTiles - 1; i++) {
+      //Condition to leave specific tiles out for Mouse monsters
       if (i !== 1 && i !== 4 && i !== 5) {
         let result = {
           x: "",
