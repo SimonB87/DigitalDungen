@@ -10,7 +10,7 @@ function Monster(type, strenght, deffence) {
   this.attackScream = function() {
     return "Grrr!";
   };
-  this.attackScream = function() {
+  this.dieScream = function() {
     return "Eeeh.";
   };
 }
