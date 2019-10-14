@@ -1,6 +1,6 @@
 monstersSpawn = {
+    locations: [],
     getAllLocations: function() {
-        let locations = [];
         const SELECTOR_ALL_TILES = document.querySelectorAll("#board .tile");
         let numberOfTiles = SELECTOR_ALL_TILES.length;
         for(let i = 0; i < numberOfTiles; i++) {
@@ -14,10 +14,13 @@ monstersSpawn = {
             result.x = parseInt(coordinatesXY[1], 10);
             result.y = parseInt(coordinatesXY[4], 10);
 
-            locations.push(result);
+            this.locations.push(result);
         }
-        console.log(locations);
-      }
+        console.log(this.locations);
+      },
+    selectRandomTiles: function() {
+        //
+    }
 }
 
 monstersSpawn.getAllLocations();

@@ -33,7 +33,7 @@ $(document).ready(function() {
     } else if (destination === "east") {
       moveHero.moveHero(+1, 0);
     } else if (destination === "west") {
-      moveHero.moveHero(+1, 0);
+      moveHero.moveHero(-1, 0);
     }
 
     moveHeroEvaluation();
@@ -92,8 +92,13 @@ function correctionOfBoardSize() {
 
 function checkForVictory() {
   var heroPosition = hero.buildHeroPosition();
-
-  if (heroPosition == ".x5.y5") {
+  const finishTile = document.querySelector("#board .tile[tiletype=finish]").getAttribute("class");//"tile x4 y4"
+  const finishTileX = finishTile[6];
+  const finishTileY = finishTile[9];
+  const finishTileCooordinates = ".x" + finishTileX +".y" + finishTileY;
+  
+  //.x5.y5
+  if (heroPosition == finishTileCooordinates) {
     setTimeout(printResult(), 300);
     blockUnusedDoors();
 
