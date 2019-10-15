@@ -18,18 +18,18 @@ function Monster(type, strenght, deffence, monsterAvatar) {
 }
 
 let monsterArray = [
-  new Monster("Dragon", 10, 12, "&#xf6d5;"),
-  new Monster("Dragon", 10, 12, "&#xf6d5;"),
-  new Monster("Dragon", 10, 12, "&#xf6d5;"),
-  new Monster("Dragon", 10, 12, "&#xf6d5;"),
-  new Monster("Crawler", 4, 3, "&#xf188;"),
-  new Monster("Crawler", 4, 3, "&#xf188;"),
-  new Monster("Crawler", 4, 3, "&#xf188;"),
-  new Monster("Crawler", 4, 3, "&#xf188;"),
-  new Monster("Crawler", 4, 3, "&#xf188;"),
-  new Monster("Crawler", 4, 3, "&#xf188;"),
-  new Monster("Crawler", 4, 3, "&#xf188;"),
-  new Monster("Frog", 2, 1, "&#xf52e;"),
-  new Monster("Frog", 2, 1, "&#xf52e;"),
-  new Monster("Frog", 2, 1, "&#xf52e;")
+  new Monster("Dragon", 10, 12, "fa-dragon"),
+  new Monster("Dragon", 10, 12, "fa-dragon"),
+  new Monster("Dragon", 10, 12, "fa-dragon"),
+  new Monster("Dragon", 10, 12, "fa-dragon"),
+  new Monster("Crawler", 4, 3, "fa-spider"),
+  new Monster("Crawler", 4, 3, "fa-spider"),
+  new Monster("Crawler", 4, 3, "fa-spider"),
+  new Monster("Crawler", 4, 3, "fa-spider"),
+  new Monster("Crawler", 4, 3, "fa-spider"),
+  new Monster("Crawler", 4, 3, "fa-spider"),
+  new Monster("Crawler", 4, 3, "fa-spider"),
+  new Monster("Frog", 2, 1, "fa-frog"),
+  new Monster("Frog", 2, 1, "fa-frog"),
+  new Monster("Frog", 2, 1, "fa-frog")
 ]

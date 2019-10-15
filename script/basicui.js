@@ -28,8 +28,6 @@ $(document).ready(function() {
       monsterArray[11].position = { x: 2, y: 1 };
       monsterArray[12].position = { x: 1, y: 2 };
       monsterArray[13].position = { x: 2, y: 2 };
-
-      console.log(monsterArray);
     }
   });
 
@@ -146,17 +144,23 @@ function prepareRooms() {
   function showMonsters(heroPositionValue) {
     for ( let monster = 0; monster < monsterArray.length; monster++ ) {
       if (( monsterArray[monster].position.x === hero.position.x ) && (monsterArray[monster].position.y === hero.position.y )) {
-        
+        var selector = "div" + heroPositionValue + "> div.tile__centre > i.monster.fas";
+        document.querySelector(selector).classList.add(monsterArray[monster].monsterAvatar);
       }
+      
     }
-/*     var selector = "div" + heroPositionValue + "> div.tile__centre > i.monster";
-    $(selector).removeClass("hidden"); */
-
   }
 }
 
 function hideMonsters() {
-  $("i.monster").addClass("hidden");
+  const LIST_OF_MONSTER_AVATARS = ["fa-dragon", "fa-spider", "fa-frog"];
+  for(let numAvatars = 0; numAvatars < LIST_OF_MONSTER_AVATARS.length; numAvatars++ ){
+    let selector = "i.monster.fas";
+    let selectorWithAvatar = selector + "." + LIST_OF_MONSTER_AVATARS[numAvatars];
+    if( document.querySelectorAll(selectorWithAvatar).length > 0 ) {
+      document.querySelector(selectorWithAvatar).classList.remove(LIST_OF_MONSTER_AVATARS[numAvatars]);
+    }
+  }
 }
 
 function blockUnusedDoors() {
