@@ -22,20 +22,14 @@ $(document).ready(function() {
     prepareRooms();
 
     function setRandomPositions() {
-      monstersObject.dragon1.position = monstersSpawn.shuffledLocations[0];
-      monstersObject.dragon2.position = monstersSpawn.shuffledLocations[1];
-      monstersObject.dragon3.position = monstersSpawn.shuffledLocations[2];
-      monstersObject.dragon4.position = monstersSpawn.shuffledLocations[3];
-      monstersObject.crawler1.position = monstersSpawn.shuffledLocations[4];
-      monstersObject.crawler2.position = monstersSpawn.shuffledLocations[5];
-      monstersObject.crawler3.position = monstersSpawn.shuffledLocations[6];
-      monstersObject.crawler4.position = monstersSpawn.shuffledLocations[7];
-      monstersObject.crawler5.position = monstersSpawn.shuffledLocations[8];
-      monstersObject.crawler6.position = monstersSpawn.shuffledLocations[9];
-      monstersObject.crawler7.position = monstersSpawn.shuffledLocations[10];
-      monstersObject.frog1.position = { x: 2, y: 1 };
-      monstersObject.frog2.position = { x: 1, y: 2 };
-      monstersObject.frog3.position = { x: 2, y: 2 };
+      for (let num = 0; num < 11; num++ ) {
+        monsterArray[num].position = monstersSpawn.shuffledLocations[num];
+      }
+      monsterArray[11].position = { x: 2, y: 1 };
+      monsterArray[12].position = { x: 1, y: 2 };
+      monsterArray[13].position = { x: 2, y: 2 };
+
+      console.log(monsterArray);
     }
   });
 
