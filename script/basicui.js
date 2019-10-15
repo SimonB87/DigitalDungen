@@ -29,7 +29,6 @@ $(document).ready(function() {
       monsterArray[12].position = { x: 1, y: 2 };
       monsterArray[13].position = { x: 2, y: 2 };
       monsterArray[14].position = { x: 4, y: 4 };
-      console.log(monsterArray);
     }
   });
 
