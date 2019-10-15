@@ -28,6 +28,8 @@ $(document).ready(function() {
       monsterArray[11].position = { x: 2, y: 1 };
       monsterArray[12].position = { x: 1, y: 2 };
       monsterArray[13].position = { x: 2, y: 2 };
+      monsterArray[14].position = { x: 4, y: 4 };
+      console.log(monsterArray);
     }
   });
 
@@ -153,7 +155,7 @@ function prepareRooms() {
 }
 
 function hideMonsters() {
-  const LIST_OF_MONSTER_AVATARS = ["fa-dragon", "fa-spider", "fa-frog"];
+  const LIST_OF_MONSTER_AVATARS = ["fa-dragon", "fa-spider", "fa-frog", "fa-ghost"];
   for(let numAvatars = 0; numAvatars < LIST_OF_MONSTER_AVATARS.length; numAvatars++ ){
     let selector = "i.monster.fas";
     let selectorWithAvatar = selector + "." + LIST_OF_MONSTER_AVATARS[numAvatars];

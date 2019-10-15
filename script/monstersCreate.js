@@ -31,5 +31,6 @@ let monsterArray = [
   new Monster("Crawler", 4, 3, "fa-spider"),
   new Monster("Frog", 2, 1, "fa-frog"),
   new Monster("Frog", 2, 1, "fa-frog"),
-  new Monster("Frog", 2, 1, "fa-frog")
+  new Monster("Frog", 2, 1, "fa-frog"),
+  new Monster("Ghost", 4, 4, "fa-ghost"),
 ]
