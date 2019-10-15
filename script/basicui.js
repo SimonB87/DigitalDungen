@@ -144,8 +144,14 @@ function prepareRooms() {
   }
 
   function showMonsters(heroPositionValue) {
-    var selector = "div" + heroPositionValue + "> div.tile__centre > i.monster";
-    $(selector).removeClass("hidden");
+    for ( let monster = 0; monster < monsterArray.length; monster++ ) {
+      if (( monsterArray[monster].position.x === hero.position.x ) && (monsterArray[monster].position.y === hero.position.y )) {
+        
+      }
+    }
+/*     var selector = "div" + heroPositionValue + "> div.tile__centre > i.monster";
+    $(selector).removeClass("hidden"); */
+
   }
 }
 
