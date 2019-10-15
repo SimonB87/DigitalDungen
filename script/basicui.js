@@ -148,7 +148,6 @@ function prepareRooms() {
         var selector = "div" + heroPositionValue + "> div.tile__centre > i.monster.fas";
         document.querySelector(selector).classList.add(monsterArray[monster].monsterAvatar);
       }
-      
     }
   }
 }
