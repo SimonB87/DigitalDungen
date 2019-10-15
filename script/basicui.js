@@ -15,8 +15,21 @@ $(document).ready(function() {
     $("i.hero").remove();
 
     $(heroPosition + " .tile__centre").prepend(hero.heroAvatar);
+
+    setRandomPositions();
+
     blinkHeroIcon();
     prepareRooms();
+
+    function setRandomPositions() {
+      for (let num = 0; num < 11; num++ ) {
+        monsterArray[num].position = monstersSpawn.shuffledLocations[num];
+      }
+      monsterArray[11].position = { x: 2, y: 1 };
+      monsterArray[12].position = { x: 1, y: 2 };
+      monsterArray[13].position = { x: 2, y: 2 };
+      monsterArray[14].position = { x: 4, y: 4 };
+    }
   });
 
   //After clicking doors move hero
@@ -33,7 +46,7 @@ $(document).ready(function() {
     } else if (destination === "east") {
       moveHero.moveHero(+1, 0);
     } else if (destination === "west") {
-      moveHero.moveHero(+1, 0);
+      moveHero.moveHero(-1, 0);
     }
 
     moveHeroEvaluation();
@@ -92,8 +105,15 @@ function correctionOfBoardSize() {
 
 function checkForVictory() {
   var heroPosition = hero.buildHeroPosition();
+  const finishTile = document
+    .querySelector("#board .tile[tiletype=finish]")
+    .getAttribute("class"); //"tile x4 y4"
+  const finishTileX = finishTile[6];
+  const finishTileY = finishTile[9];
+  const finishTileCooordinates = ".x" + finishTileX + ".y" + finishTileY;
 
-  if (heroPosition == ".x5.y5") {
+  //.x5.y5
+  if (heroPosition == finishTileCooordinates) {
     setTimeout(printResult(), 300);
     blockUnusedDoors();
 
@@ -123,13 +143,24 @@ function prepareRooms() {
   }
 
   function showMonsters(heroPositionValue) {
-    var selector = "div" + heroPositionValue + "> div.tile__centre > i.monster";
-    $(selector).removeClass("hidden");
+    for ( let monster = 0; monster < monsterArray.length; monster++ ) {
+      if (( monsterArray[monster].position.x === hero.position.x ) && (monsterArray[monster].position.y === hero.position.y )) {
+        var selector = "div" + heroPositionValue + "> div.tile__centre > i.monster.fas";
+        document.querySelector(selector).classList.add(monsterArray[monster].monsterAvatar);
+      }
+    }
   }
 }
 
 function hideMonsters() {
-  $("i.monster").addClass("hidden");
+  const LIST_OF_MONSTER_AVATARS = ["fa-dragon", "fa-spider", "fa-frog", "fa-ghost"];
+  for(let numAvatars = 0; numAvatars < LIST_OF_MONSTER_AVATARS.length; numAvatars++ ){
+    let selector = "i.monster.fas";
+    let selectorWithAvatar = selector + "." + LIST_OF_MONSTER_AVATARS[numAvatars];
+    if( document.querySelectorAll(selectorWithAvatar).length > 0 ) {
+      document.querySelector(selectorWithAvatar).classList.remove(LIST_OF_MONSTER_AVATARS[numAvatars]);
+    }
+  }
 }
 
 function blockUnusedDoors() {

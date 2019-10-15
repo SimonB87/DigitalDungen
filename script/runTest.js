@@ -1,6 +1,6 @@
 //Test for walk through the labyrint.
 function runTest() {
-  for (var i = 1; i < 5; i++) {
+  for (var i = 1; i < 4; i++) {
     makeOneStep(i);
   }
 }
@@ -16,7 +16,7 @@ function makeOneStep(step) {
 
   //prepare way East
   var intervalToEast = intervalToSouth + 750;
-  var selectorToEast = ".tile.x" + step + ".y5 i.doors--east";
+  var selectorToEast = ".tile.x" + step + ".y4 i.doors--east";
 
   setTimeout(function() {
     document.querySelector(selectorToEast).click();
