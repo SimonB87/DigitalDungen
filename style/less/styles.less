@@ -94,7 +94,7 @@ body {
 
         //border: 0.3125rem solid rgba(255, 0, 0, 0.1);
         background-color: #e3d2b7;
-        background-image: url("../../pics/tile.jpg");
+        background-image: url("../../pics/darkTileBasic.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -109,8 +109,24 @@ body {
         align-items: center;
         align-content: space-around;
 
+        &.x3.y1, &.x1.y3{
+          background-image: url("../../pics/darkTileThumbClosed.png");
+        }
+
+        &.x4.y2,&.x3.y3{
+          background-image: url("../../pics/darkTileThumbOpen.png");
+        }
+
+        &.x3.y4{
+          background-image: url("../../pics/grayTileFireAndWaterAndBridges.png");
+        }
+
+        &.x4.y3{
+          background-image: url("../../pics/grayTileFireAndWater.png");
+        }
+
         &[tiletype="finish"] {
-          background-image: url("../../pics/tileFinish.jpg");
+          background-image: url("../../pics/darkTileTreasure.png");
         }
 
         .tile__centre > i.hero {
@@ -142,6 +158,10 @@ body {
 
           i {
             cursor: pointer;
+            color: #000;
+            background-color: gray;
+            padding: 2px;
+            border-radius: 4px;
           }
         }
 

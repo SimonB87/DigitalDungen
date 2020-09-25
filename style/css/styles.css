@@ -77,7 +77,7 @@ body .container .board .tile {
   width: 25%;
   height: 25%;
   background-color: #e3d2b7;
-  background-image: url("../../pics/tile.jpg");
+  background-image: url("../../pics/darkTileBasic.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -90,8 +90,22 @@ body .container .board .tile {
   align-items: center;
   align-content: space-around;
 }
+body .container .board .tile.x3.y1,
+body .container .board .tile.x1.y3 {
+  background-image: url("../../pics/darkTileThumbClosed.png");
+}
+body .container .board .tile.x4.y2,
+body .container .board .tile.x3.y3 {
+  background-image: url("../../pics/darkTileThumbOpen.png");
+}
+body .container .board .tile.x3.y4 {
+  background-image: url("../../pics/grayTileFireAndWaterAndBridges.png");
+}
+body .container .board .tile.x4.y3 {
+  background-image: url("../../pics/grayTileFireAndWater.png");
+}
 body .container .board .tile[tiletype="finish"] {
-  background-image: url("../../pics/tileFinish.jpg");
+  background-image: url("../../pics/darkTileTreasure.png");
 }
 body .container .board .tile .tile__centre > i.hero {
   color: orange;
@@ -118,6 +132,10 @@ body .container .board .tile .tile--inside {
 }
 body .container .board .tile .tile--inside i {
   cursor: pointer;
+  color: #000;
+  background-color: gray;
+  padding: 2px;
+  border-radius: 4px;
 }
 body .container .board .tile .pathDoors {
   cursor: pointer;
