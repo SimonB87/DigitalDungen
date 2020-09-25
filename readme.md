@@ -39,3 +39,7 @@ Front End Web Developer - author of the game
 
 - The hero can go around the map, but all the doors can be used to navigate.
 - Next step: Only the doors that are in the room as the hero is, could be used for moving the hero to another room.
+
+### Dev notes
+
+- build Less `lessc style/less/styles.less style/css/styles.css`
