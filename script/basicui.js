@@ -40,13 +40,13 @@ $(document).ready(function() {
     $("i.hero").remove();
 
     if (destination === "north") {
-      moveHero.moveHero(0, -1);
-    } else if (destination === "south") {
-      moveHero.moveHero(0, +1);
-    } else if (destination === "east") {
-      moveHero.moveHero(+1, 0);
-    } else if (destination === "west") {
       moveHero.moveHero(-1, 0);
+    } else if (destination === "south") {
+      moveHero.moveHero(+1, 0);
+    } else if (destination === "east") {
+      moveHero.moveHero(0, +1);
+    } else if (destination === "west") {
+      moveHero.moveHero(0, -1);
     }
 
     moveHeroEvaluation();
@@ -110,10 +110,10 @@ function checkForVictory() {
     .getAttribute("class"); //"tile x4 y4"
   const finishTileX = finishTile[6];
   const finishTileY = finishTile[9];
-  const finishTileCooordinates = ".x" + finishTileX + ".y" + finishTileY;
+  const finishTileCoordinates = ".x" + finishTileX + ".y" + finishTileY;
 
   //.x5.y5
-  if (heroPosition == finishTileCooordinates) {
+  if (heroPosition == finishTileCoordinates) {
     setTimeout(printResult(), 300);
     blockUnusedDoors();
 
