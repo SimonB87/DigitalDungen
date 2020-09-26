@@ -107,6 +107,9 @@ body .container .board .tile.x4.y3 {
 body .container .board .tile[tiletype="finish"] {
   background-image: url("../../pics/darkTileTreasure.png");
 }
+body .container .board .tile[tiletype="start"] {
+  background-image: url("../../pics/tileStart.png");
+}
 body .container .board .tile .tile__centre > i.hero {
   color: orange;
   -webkit-text-stroke-width: 1px;
