@@ -42,4 +42,4 @@ Front End Web Developer - author of the game
 
 ### Dev notes
 
-- build Less `lessc style/less/styles.less style/css/styles.css`
+- build Less `lessc style/less/styles.less style/css/styles.css` or `gulp less`
