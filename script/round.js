@@ -26,7 +26,7 @@ let round = {
         "Attack</button>" + 
         "<button type='button' class='btn btn-outline-info btn-actions' onclick='round.heroDefends();'>" + 
         "Deffend</button>" + 
-        "<button type='button' class='btn btn-outline-dark btn-actions onclick='round.heroWithDraws();'>"+
+        "<button type='button' class='btn btn-outline-dark btn-actions' onclick='round.heroWithDraws();'>"+
         "Escape</button>";
       modalDialog.classList.add("modal-fighting");
       modalDialogSectionTwo.innerHTML = actionButtons;
