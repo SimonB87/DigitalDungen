@@ -136,7 +136,7 @@ body .container .board .tile .tile--inside {
 body .container .board .tile .tile--inside i {
   cursor: pointer;
   color: #000;
-  background-color: gray;
+  background-color: rgba(130, 130, 130, 0.7);
   padding: 2px;
   border-radius: 4px;
 }
