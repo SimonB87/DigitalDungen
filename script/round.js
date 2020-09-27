@@ -44,8 +44,8 @@ let round = {
  
     for ( var i = 0; i < monsterCount; i++){
       if ((monsterArray[i].position.x == hero.position.x) && (monsterArray[i].position.y == hero.position.y)) {
-        selectedMonster = monsterArray[i].monsterID;
-      } 
+        selectedMonster = i;
+        } 
     }
     return selectedMonster;
   }
