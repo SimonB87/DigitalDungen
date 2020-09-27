@@ -1,7 +1,8 @@
-function Monster(type, strenght, deffence, monsterAvatar) {
+function Monster(monsterID, type, strength, defense, monsterAvatar) {
+  this.monsterID = monsterID;
   this.type = type;
-  this.strenght = strenght;
-  this.deffence = deffence;
+  this.strength = strength;
+  this.defense = defense;
   this.hitPoints = 100;
   this.monsterStatus = "hidden";
   this.monsterAvatar = monsterAvatar;
@@ -18,19 +19,19 @@ function Monster(type, strenght, deffence, monsterAvatar) {
 }
 
 let monsterArray = [
-  new Monster("Dragon", 10, 12, "fa-dragon"),
-  new Monster("Dragon", 10, 12, "fa-dragon"),
-  new Monster("Dragon", 10, 12, "fa-dragon"),
-  new Monster("Dragon", 10, 12, "fa-dragon"),
-  new Monster("Crawler", 4, 3, "fa-spider"),
-  new Monster("Crawler", 4, 3, "fa-spider"),
-  new Monster("Crawler", 4, 3, "fa-spider"),
-  new Monster("Crawler", 4, 3, "fa-spider"),
-  new Monster("Crawler", 4, 3, "fa-spider"),
-  new Monster("Crawler", 4, 3, "fa-spider"),
-  new Monster("Crawler", 4, 3, "fa-spider"),
-  new Monster("Frog", 2, 1, "fa-frog"),
-  new Monster("Frog", 2, 1, "fa-frog"),
-  new Monster("Frog", 2, 1, "fa-frog"),
-  new Monster("Deamon", 4, 4, "fa-ghost"),
+  new Monster(1, "Dragon", 10, 12, "fa-dragon"),
+  new Monster(2, "Dragon", 10, 12, "fa-dragon"),
+  new Monster(3, "Dragon", 10, 12, "fa-dragon"),
+  new Monster(4, "Dragon", 10, 12, "fa-dragon"),
+  new Monster(5, "Crawler", 4, 3, "fa-spider"),
+  new Monster(6, "Crawler", 4, 3, "fa-spider"),
+  new Monster(7, "Crawler", 4, 3, "fa-spider"),
+  new Monster(8, "Crawler", 4, 3, "fa-spider"),
+  new Monster(9, "Crawler", 4, 3, "fa-spider"),
+  new Monster(10, "Crawler", 4, 3, "fa-spider"),
+  new Monster(11, "Crawler", 4, 3, "fa-spider"),
+  new Monster(12, "Frog", 2, 1, "fa-frog"),
+  new Monster(13, "Frog", 2, 1, "fa-frog"),
+  new Monster(14, "Frog", 2, 1, "fa-frog"),
+  new Monster(15, "Daemon", 4, 4, "fa-ghost"),
 ]

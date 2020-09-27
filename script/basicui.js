@@ -40,13 +40,13 @@ $(document).ready(function() {
     $("i.hero").remove();
 
     if (destination === "north") {
-      moveHero.moveHero(-1, 0);
-    } else if (destination === "south") {
-      moveHero.moveHero(+1, 0);
-    } else if (destination === "east") {
-      moveHero.moveHero(0, +1);
-    } else if (destination === "west") {
       moveHero.moveHero(0, -1);
+    } else if (destination === "south") {
+      moveHero.moveHero(0, +1);
+    } else if (destination === "east") {
+      moveHero.moveHero(+1, 0);
+    } else if (destination === "west") {
+      moveHero.moveHero(-1, 0);
     }
 
     moveHeroEvaluation();
@@ -55,7 +55,8 @@ $(document).ready(function() {
   function moveHeroEvaluation() {
     toggleHeroInsideClass();
     prepareRooms();
-    checkForVictory();
+    round.checkForFight();
+    round.checkForVictory();
     blinkHeroIcon(500);
 
     function toggleHeroInsideClass() {
@@ -100,33 +101,6 @@ function correctionOfBoardSize() {
     $("#board")
       .css("height", maximumBoardSideLength)
       .css("width", maximumBoardSideLength);
-  }
-}
-
-function checkForVictory() {
-  var heroPosition = hero.buildHeroPosition();
-  const finishTile = document
-    .querySelector("#board .tile[tiletype=finish]")
-    .getAttribute("class"); //"tile x4 y4"
-  const finishTileX = finishTile[6];
-  const finishTileY = finishTile[9];
-  const finishTileCoordinates = ".x" + finishTileX + ".y" + finishTileY;
-
-  //.x5.y5
-  if (heroPosition == finishTileCoordinates) {
-    setTimeout(printResult(), 300);
-    blockUnusedDoors();
-
-    document.getElementById("myModal--notice").innerHTML =
-      "You are the winner!!!";
-    document.getElementById("modalButton").click();
-  }
-
-  function printResult() {
-    $("#myModal").modal({
-      backdrop: "static",
-      keyboard: false
-    });
   }
 }
 
