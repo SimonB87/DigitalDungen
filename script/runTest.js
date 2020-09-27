@@ -16,7 +16,7 @@ function makeOneStep(step) {
 
   //prepare way East
   var intervalToEast = intervalToSouth + 750;
-  var selectorToEast = ".tile.x" + step + ".y4 i.doors--east";
+  var selectorToEast = `.tile.x4.y${step} i.doors--east`;
 
   setTimeout(function() {
     document.querySelector(selectorToEast).click();
