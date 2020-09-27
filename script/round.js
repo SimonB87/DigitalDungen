@@ -1,16 +1,21 @@
 let round = {
   checkForFight: function(){
     const monsterInRoomWithHero = round.checkForPresentMonster();
-    //test
-    console.log(monsterInRoomWithHero);
-    //test
     if (!( monsterInRoomWithHero == null )) {
-      console.log("you encountered a " +
+      hero.message = "you encountered a " +
       monsterArray[monsterInRoomWithHero].type + " in room " + 
-      "X" + monsterArray[monsterInRoomWithHero].position.x + " Y" + monsterArray[monsterInRoomWithHero].position.y);
+      "X" + monsterArray[monsterInRoomWithHero].position.x + " Y" + monsterArray[monsterInRoomWithHero].position.y;
+      hero.situation = "fighting";
     } else {
-      console.log(`Room is empty!`);
+      hero.message ="Room is empty!";
+      hero.situation = "search room";
     }
+    this.prepareFight();
+  },
+  prepareFight: function(){
+    const newMessage = `<strong>Notice: </strong> ${hero.message} <br> <strong>State: </strong> ${hero.situation}`;
+    notices.revealMessage(newMessage);
+    setTimeout(notices.showModal(), 1000);
   },
   checkForVictory: function() {
     const heroPosition = hero.buildHeroPosition();
@@ -21,22 +26,14 @@ let round = {
     const finishTileY = finishTile[9];
     const finishTileCoordinates = ".x" + finishTileX + ".y" + finishTileY;
   
-    //.x5.y5
-    if (heroPosition == finishTileCoordinates) {
-      setTimeout(printResult(), 300);
+    //.x4.y4 and Deamon is dead
+    if ((heroPosition == finishTileCoordinates) && ( monsterArray[14].hitPoints == 0)) {
+      const newMessage = "You are the winner!!!";
+      notices.revealMessage(newMessage);
+      setTimeout(notices.showModal(), 300);
       blockUnusedDoors();
-  
-      document.getElementById("myModal--notice").innerHTML =
-        "You are the winner!!!";
-      document.getElementById("modalButton").click();
     }
   
-    function printResult() {
-      $("#myModal").modal({
-        backdrop: "static",
-        keyboard: false
-      });
-    }
   },
   checkForPresentMonster: function(){
     const monsterCount = monsterArray.length;
