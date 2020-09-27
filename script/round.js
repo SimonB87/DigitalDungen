@@ -13,9 +13,36 @@ let round = {
     this.prepareFight();
   },
   prepareFight: function(){
-    const newMessage = `<strong>Notice: </strong> ${hero.message} <br> <strong>State: </strong> ${hero.situation}`;
+    const newMessage = `<strong>Notice: </strong> ${hero.message} <br> <strong>State: </strong> ${hero.situation} <br> <h3>Choose action:</h3> `;
     notices.revealMessage(newMessage);
     setTimeout(notices.showModal(), 1000);
+    prepareFightModal();
+
+    function prepareFightModal(){
+      const modalDialog = document.querySelector(".modal-dialog");
+      const modalDialogSectionTwo = document.querySelector("#modalSectionTwo");
+      const actionButtons = 
+        "<button type='button' class='btn btn-outline-primary btn-actions' onclick='round.heroAttacks();'>" +
+        "Attack</button>" + 
+        "<button type='button' class='btn btn-outline-info btn-actions' onclick='round.heroDefends();'>" + 
+        "Deffend</button>" + 
+        "<button type='button' class='btn btn-outline-dark btn-actions onclick='round.heroWithDraws();'>"+
+        "Escape</button>";
+      modalDialog.classList.add("modal-fighting");
+      modalDialogSectionTwo.innerHTML = actionButtons;
+    }
+  },
+  heroAttacks: function(){
+    console.log("Hero attacks!");
+    document.querySelector(".modal-dialog .close").click();
+  },
+  heroDefends: function(){
+    console.log("Hero deffends!");
+    document.querySelector(".modal-dialog .close").click();
+  },
+  heroWithDraws: function(){
+    console.log("Hero runs away!");
+    document.querySelector(".modal-dialog .close").click();
   },
   checkForVictory: function() {
     const heroPosition = hero.buildHeroPosition();

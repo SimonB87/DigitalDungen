@@ -136,7 +136,7 @@ body .container .board .tile .tile--inside {
 body .container .board .tile .tile--inside i {
   cursor: pointer;
   color: #000;
-  background-color: rgba(130, 130, 130, 0.7);
+  background-color: rgba(130, 130, 130, 0.35);
   padding: 2px;
   border-radius: 4px;
 }
@@ -170,11 +170,19 @@ body .modal-content .modal-header {
 body .modal-content .modal-body {
   display: block;
 }
+body .modal-content .modal-body .modal--content {
+  display: flex;
+  justify-content: space-evenly;
+}
 body .modal-content .modal-body--sectionOne {
   height: 21vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+body .modal-content .modal-body--sectionOne h3 {
+  text-align: center;
+  padding: 0.5rem 0;
 }
 body .modal-content .modal-exit {
   color: red;
