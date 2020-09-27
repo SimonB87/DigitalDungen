@@ -39,6 +39,8 @@ $(document).ready(function() {
 
     $("i.hero").remove();
 
+    hero.saveHeroPosition();
+
     if (destination === "north") {
       moveHero.moveHero(-1, 0);
     } else if (destination === "south") {

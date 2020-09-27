@@ -3,11 +3,19 @@ hero = {
     x: 1,
     y: 1
   },
+  previousPosition: {
+    x: 1,
+    y: 1
+  },
   situation: "",
   message: "",
   heroAvatar: "<i class='hero fas'>&#xf43f;</i>",
   buildHeroPosition: function() {
     return ".x" + hero.position.x + ".y" + hero.position.y;
+  },
+  saveHeroPosition: function() {
+    this.previousPosition.x = this.position.x;
+    this.previousPosition.y = this.position.y;
   }
 };
 
