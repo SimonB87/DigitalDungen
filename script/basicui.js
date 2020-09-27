@@ -40,13 +40,13 @@ $(document).ready(function() {
     $("i.hero").remove();
 
     if (destination === "north") {
-      moveHero.moveHero(0, -1);
-    } else if (destination === "south") {
-      moveHero.moveHero(0, +1);
-    } else if (destination === "east") {
-      moveHero.moveHero(+1, 0);
-    } else if (destination === "west") {
       moveHero.moveHero(-1, 0);
+    } else if (destination === "south") {
+      moveHero.moveHero(+1, 0);
+    } else if (destination === "east") {
+      moveHero.moveHero(0,+1);
+    } else if (destination === "west") {
+      moveHero.moveHero(0,-1);
     }
 
     moveHeroEvaluation();
