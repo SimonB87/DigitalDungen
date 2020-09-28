@@ -9,7 +9,7 @@ hero = {
   },
   situation: "",
   message: "",
-  heroAvatar: "<i class='hero fas'>&#xf43f;</i>",
+  heroAvatar: "<i class='hero fas'>&#xf521;</i>",
   buildHeroPosition: function() {
     return ".x" + hero.position.x + ".y" + hero.position.y;
   },
