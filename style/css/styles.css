@@ -162,6 +162,9 @@ body .container .board .tile .tile--inside i {
 body .container .board .tile .pathDoors {
   cursor: pointer;
 }
+body .container .board .tile .pathDoors:hover {
+  color: #fff;
+}
 body .container .board .tile .hidden {
   pointer-events: none;
   opacity: 0;
