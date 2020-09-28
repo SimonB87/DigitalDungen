@@ -22,10 +22,17 @@ body {
     z-index: 2;
   }
   .audioDiv {
-    float: right;
+    position: relative;
+    .audioDiv--controls{
+      position: absolute;
+      top: 0;
+      right: 0;
+
+    }
   }
   .audioDiv--controls{
     .audioDiv--controls--icons{
+      color: #59564e;
       padding: 0.5rem;
       cursor: pointer;
     }

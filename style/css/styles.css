@@ -17,9 +17,15 @@ body .audioElem {
   z-index: 2;
 }
 body .audioDiv {
-  float: right;
+  position: relative;
+}
+body .audioDiv .audioDiv--controls {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 body .audioDiv--controls .audioDiv--controls--icons {
+  color: #59564e;
   padding: 0.5rem;
   cursor: pointer;
 }
