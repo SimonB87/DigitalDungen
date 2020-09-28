@@ -18,9 +18,19 @@
 </head>
 <body>
   <div class="audioDiv">
-    <audio class="audioElem" id="myAudio" controls autoplay>
-      <source src="music/sawsquarenoise_-_01_-_Valiesse.ogg" type="audio/ogg">
-      <source src="music/sawsquarenoise_-_01_-_Valiesse.mp3" type="audio/mpeg">
+    <dic class="audioDiv--controls">
+      <!-- https://www.w3schools.com/tags/ref_av_dom.asp -->
+      <i class="audioDiv--controls--icons fa fa-play" onclick="musicObject.play()"></i>
+      <i class="audioDiv--controls--icons fa fa-pause" onclick="musicObject.pause()"></i>
+      <i class="audioDiv--controls--icons fa fa-forward" onclick="musicObject.playOtherTrack(+1)"></i>
+      <i class="audioDiv--controls--icons fa fa-backward" onclick="musicObject.playOtherTrack(-1)"></i>
+      <i class="audioDiv--controls--icons fas fa-volume-down" onclick="musicObject.volumeChange(-0.2)"></i>
+      <i class="audioDiv--controls--icons fas fa-volume-up" onclick="musicObject.volumeChange(+0.2)"></i>
+      <i class="audioDiv--controls--icons fas fa-volume-mute" onclick="musicObject.mute()"></i>
+    </dic>
+    <audio class="audioElem" id="myAudio" controls autoplay style="display: none; visibility: hidden;">
+      <source id="sourceOgg" src="music/sawsquarenoise_-_01_-_Valiesse.ogg" type="audio/ogg">
+      <source id="sourceMp3" src="music/sawsquarenoise_-_01_-_Valiesse.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
     </audio>
   </div>
