@@ -1,39 +1,43 @@
-# Digital dungeon
+# Digital dungeon :smiling_imp: :boom: 
 
-A JavaScript dungeon crawler
+A JavaScript dungeon crawler :fire: and fighting game :feelsgood:
 
 ### Info:
 
-- Game for testing OOP application in JavaScript.
-- Play the current version [LIVE CLICK HERE!](http://simonburyan.cz/digitaldungeon/)
+- Play the latest version [LIVE CLICK HERE!](https://simonb87.github.io/DigitalDungen/)
+- Game for testing OOP application in :point_right: JavaScript :point_left: :sparkling_heart: .
 
 ### Description:
 
 
-- [x] Hero - a player venturing through the dungeon.
+- [X] Hero - a player venturing through the dungeon suspect:.
 
-- [x] Dungeon - map of 4 x 4 tiles.
+- [X] Dungeon - map of 4 x 4 tiles :european_castle: .
 
-- [ ] Danger - the player can run into monsters. Monsters are hidden and reveal only, if hero enters their room.
+- [X] Danger - the player can run into monsters :frog: :dragon_face: :ghost: . Monsters are hidden and reveal only, if hero enters their room.
 
-- [X] Monsters - beasts that fight with the hero. In a room there can be ususally one monster.
+- [X] Monsters - beasts :japanese_ogre: that fight with the hero. In a room there can be one monster :collision: :punch: .
 
-- [X] Discover dungeon - the hero passes the map. He can proceed in four directions (East, South, West, North).
+- [X] Discover dungeon - the hero passes the map. He can proceed in four directions (East, South, West, North) :door: .
 
-- [X] Target - hero has to go to the end of the game area.
+- [X] Target - hero has to go to the end of the game area :flags: .
 
-- [ ] Hero hit points - hero has 3 God Blessings, which can regenerate him 3 times, if his hit points went to 0. Hero can use points for minor healing.
+- [ ] Hero hit points - hero has 3 God :godmode: Blessings :raised_hands: , which can regenerate him 3 times :heart:, if his hit points went to 0 :skull:. Hero can use points for minor healing.
 
-- [ ] Action - round starts by appearing on the given square on the square. If a monster appears in front of hero, he can fight he monster or flight.
+- [X] Action - round starts by appearing on the given square on the square. If a monster :japanese_goblin: appears in front of hero :rage1: , he can fight the monster, defend himself or flight.
 
-- [ ] Fighting the monster - Monster attacks first. Hero can fight back or heal himself. The battle ends with monster or hero defeated.
+- [ ] Fighting the monster - Monster :dragon: attacks first. Hero :rage2: can fight back or heal himself. The battle ends with monster or hero defeated :collision: .
 
-- [ ] Treasures - hero can loot momnster treasures, which consist of points, armor and weapons.
+- [ ] Treasures - hero can loot monster treasures, which consist of points, armor and weapons.
+
+- [ ] Music - user can choose between ambient music tracks.
 
 ### Link:
 
 [Simon Buryan](http://www.simonburyan.cz)
-Front End Web Developer - author of the game
+- Front End Web Developer - author & developer of the game
+
+- Design of tiles by [Moon tribe](https://moon-t.com)
 
 ### Current Status:
 
@@ -43,3 +47,4 @@ Front End Web Developer - author of the game
 ### Dev notes
 
 - build Less `lessc style/less/styles.less style/css/styles.css` or `gulp less`
+- [markdown emoticons](https://gist.github.com/rxaviers/7360908)
