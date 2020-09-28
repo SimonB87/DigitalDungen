@@ -10,27 +10,27 @@ A JavaScript dungeon crawler :fire: and fighting game :feelsgood:
 ### Description:
 
 
-- [X] Hero - a player venturing through the dungeon :suspect:.
+- [X] **Hero** - a player venturing through the dungeon :suspect:.
 
-- [X] Dungeon - map of 4 x 4 tiles :european_castle: .
+- [X] **Dungeon** - map of 4 x 4 tiles :european_castle: .
 
-- [X] Danger - the player can run into monsters :frog: :dragon_face: :ghost: . Monsters are hidden and reveal only, if hero enters their room.
+- [X] **Danger** - the player can run into monsters :frog: :dragon_face: :ghost: . Monsters are hidden and reveal only, if hero enters their room.
 
-- [X] Monsters - beasts :japanese_ogre: that fight with the hero. In a room there can be one monster :collision: :punch: .
+- [X] **Monsters** - beasts :japanese_ogre: that fight with the hero. In a room there can be one monster :collision: :punch: .
 
-- [X] Discover dungeon - the hero passes the map. He can proceed in four directions (East, South, West, North) :door: .
+- [X] **Discover** dungeon - the hero passes the map. He can proceed in four directions (East, South, West, North) :door: .
 
-- [X] Target - hero has to go to the end of the game area :flags: .
+- [X] **Target** - hero has to go to the end of the game area :flags: .
 
-- [ ] Hero hit points - hero has 3 God :godmode: Blessings :raised_hands: , which can regenerate him 3 times :heart:, if his hit points went to 0 :skull:. Hero can use points for minor healing.
+- [ ] **Hero hit points** - hero has 3 God :godmode: Blessings :raised_hands: , which can regenerate him 3 times :heart:, if his hit points went to 0 :skull:. Hero can use points for minor healing.
 
-- [X] Action - round starts by appearing on the given square on the square. If a monster :japanese_goblin: appears in front of hero :rage1: , he can fight the monster, defend himself or flight.
+- [X] **Action** - round starts by appearing on the given square on the square. If a monster :japanese_goblin: appears in front of hero :rage1: , he can fight the monster, defend himself or flight.
 
-- [ ] Fighting the monster - Monster :dragon: attacks first. Hero :rage2: can fight back or heal himself. The battle ends with monster or hero defeated :collision: .
+- [ ] **Fighting the monster** - Monster :dragon: attacks first. Hero :rage2: can fight back or heal himself. The battle ends with monster or hero defeated :collision: .
 
-- [ ] Treasures - hero can loot monster treasures, which consist of points, armor and weapons.
+- [ ] **Treasures** - hero can loot monster treasures, which consist of points, armor and weapons.
 
-- [ ] Music - user can choose between ambient music tracks.
+- [ ] **Music** - user can choose between ambient music tracks.
 
 ### Link:
 
