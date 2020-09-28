@@ -37,7 +37,9 @@ A JavaScript dungeon crawler :fire: and fighting game :feelsgood:
 [Simon Buryan](http://www.simonburyan.cz)
 - Front End Web Developer - author & developer of the game
 
-- Design of tiles by [Moon tribe](https://moon-t.com)
+- Design of tiles by [Moon Tribe](https://moon-t.com)
+
+- Music by [SawsQuareNoise](https://freemusicarchive.org/music/sawsquarenoise/Fantasa_de_los_Pinos). Fantasía de los Pinos by SawsQuareNoise is licensed under a [Attribution License](https://creativecommons.org/licenses/by/4.0/). 
 
 ### Current Status:
 
