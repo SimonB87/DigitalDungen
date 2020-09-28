@@ -28,5 +28,11 @@ moveHero = {
     xAxis !== 0 ? (hero.position.x = hero.position.x + xAxis) : null;
     yAxis !== 0 ? (hero.position.y = hero.position.y + yAxis) : null;
     this.placeHeroOnMap();
+  },
+  heroRunsAway: function(){
+    $("i.hero").remove();
+    hero.position.x = hero.previousPosition.x;
+    hero.position.y = hero.previousPosition.y;
+    this.placeHeroOnMap();
   }
 };
