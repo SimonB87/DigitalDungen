@@ -26,26 +26,44 @@ let round = {
         "Attack</button>" + 
         "<button type='button' class='btn btn-outline-info btn-actions' onclick='round.heroDefends();'>" + 
         "Deffend</button>" + 
-        "<button type='button' class='btn btn-outline-dark btn-actions' onclick='round.heroWithDraws();'>"+
-        "Escape</button>";
+        "<button type='button' class='btn btn-outline-dark btn-actions' onclick='round.heroWithDraws();'>" +
+        "Escape</button>" + 
+        "<button type='button' class='btn btn-outline-warning' onclick='round.heroChangeGear();'>Reequip</button>";
       modalDialog.classList.add("modal-fighting");
       modalDialogSectionTwo.innerHTML = actionButtons;
     }
   },
   heroAttacks: function(){
-    console.log("Hero attacks!");
-    document.querySelector(".modal-dialog .close").click();
+    //document.querySelector(".modal-dialog .close").click();
+    hero.situation = "attacking";
+    notices.showBattleDialog();
+    this.settleBattleRound();//TODO
+    this.showBattleRoundResult();//TODO
   },
   heroDefends: function(){
-    console.log("Hero deffends!");
-    document.querySelector(".modal-dialog .close").click();
+    //document.querySelector(".modal-dialog .close").click();
+    hero.situation = "defending";
+    notices.showBattleDialog();
+    this.settleBattleRound();
+    this.showBattleRoundResult();
   },
   heroWithDraws: function(){
-    console.log("Hero runs away!");
     moveHero.heroRunsAway();
     this.prepareRoomBeforeRound();
     this.checkForFight();
     document.querySelector(".modal-dialog .close").click();
+  },
+  heroChangeGear: function(){
+    //TODO
+    console.log("Hero changes gear ...");
+  },
+  settleBattleRound: function(){
+    //TODO
+    console.log("Calculate battle results ...");
+  },
+  showBattleRoundResult: function(){
+    //TODO
+    console.log("Show battle results ...");
   },
   prepareRoomBeforeRound: function(){
     toggleHeroInsideClass();
