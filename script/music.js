@@ -28,7 +28,7 @@ musicObject = {
     {mp3: "sawsquarenoise_-_05_-_Rito_Oculto.mp3", ogg: "sawsquarenoise_-_05_-_Rito_Oculto.ogg"}
   ],
   playOtherTrack: function(changeToTrack){
-
+    //redesign by: https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/audioTracks
     this.trackNumberPlaying = this.trackNumberPlaying + changeToTrack;
     const numberOfTracksInList = this.trackList.length - 1;
 
