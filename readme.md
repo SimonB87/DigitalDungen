@@ -10,7 +10,7 @@ A JavaScript dungeon crawler :fire: and fighting game :feelsgood:
 ### Description:
 
 
-- [X] Hero - a player venturing through the dungeon suspect:.
+- [X] Hero - a player venturing through the dungeon :suspect:.
 
 - [X] Dungeon - map of 4 x 4 tiles :european_castle: .
 
