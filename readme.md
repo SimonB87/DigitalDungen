@@ -1,4 +1,4 @@
-# Digital dungeon :smiling_imp: :boom: 
+# :smiling_imp: Digital dungeon :boom: 
 
 A JavaScript dungeon crawler :fire: and fighting game :feelsgood:
 
