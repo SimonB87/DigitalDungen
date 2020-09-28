@@ -8,6 +8,13 @@ body {
   background-color: #ddc7a6;
   /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, #ddc7a6, #9a8b74);
+  position: relative;
+}
+body .audioElem {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
 }
 body header {
   text-align: center;
