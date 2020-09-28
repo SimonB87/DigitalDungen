@@ -16,6 +16,9 @@ body .audioElem {
   top: 0;
   z-index: 2;
 }
+body .audioDiv {
+  float: right;
+}
 body .audioDiv--controls .audioDiv--controls--icons {
   padding: 0.5rem;
   cursor: pointer;
