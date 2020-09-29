@@ -52,7 +52,8 @@ let round = {
     moveHero.heroRunsAway();
     this.prepareRoomBeforeRound();
     setTimeout(function(){ 
-      round.checkForFight(); }, 
+      round.checkForFight(); 
+    }, 
     1000);
   },
   heroChangeGear: function(){
