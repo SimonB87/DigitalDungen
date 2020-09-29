@@ -48,10 +48,12 @@ let round = {
     this.showBattleRoundResult();
   },
   heroWithDraws: function(){
+    document.querySelector(".modal-dialog .close").click();
     moveHero.heroRunsAway();
     this.prepareRoomBeforeRound();
-    this.checkForFight();
-    document.querySelector(".modal-dialog .close").click();
+    setTimeout(function(){ 
+      round.checkForFight(); }, 
+    1000);
   },
   heroChangeGear: function(){
     //TODO
