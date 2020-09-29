@@ -11,6 +11,12 @@ let round = {
       hero.situation = "search room";
     }
     this.prepareFight();
+    if ( hero.situation == "search room" ) {
+      const roundButtonAttack = document.getElementById("roundButtonAttack");
+      const roundButtonDefend = document.getElementById("roundButtonDefend");
+      roundButtonAttack.disabled = true;
+      roundButtonDefend.disabled = true;
+    }
   },
   prepareFight: function(){
     const newMessage = `<strong>Notice: </strong> ${hero.message} <br> <strong>State: </strong> ${hero.situation} <br> <h3>Choose action:</h3> `;
@@ -22,13 +28,13 @@ let round = {
       const modalDialog = document.querySelector(".modal-dialog");
       const modalDialogSectionTwo = document.querySelector("#modalSectionTwo");
       const actionButtons = 
-        "<button type='button' class='btn btn-outline-primary btn-actions' onclick='round.heroAttacks();'>" +
+        "<button id='roundButtonAttack' type='button' class='btn btn-outline-primary btn-actions' onclick='round.heroAttacks();'>" +
         "Attack</button>" + 
-        "<button type='button' class='btn btn-outline-info btn-actions' onclick='round.heroDefends();'>" + 
+        "<button id='roundButtonDefend' type='button' class='btn btn-outline-info btn-actions' onclick='round.heroDefends();'>" + 
         "Deffend</button>" + 
-        "<button type='button' class='btn btn-outline-dark btn-actions' onclick='round.heroWithDraws();'>" +
+        "<button id='roundButtonWithdraw' type='button' class='btn btn-outline-dark btn-actions' onclick='round.heroWithDraws();'>" +
         "Escape</button>" + 
-        "<button type='button' class='btn btn-outline-warning' onclick='round.heroChangeGear();'>Reequip</button>";
+        "<button id='roundButtonReequip' type='button' class='btn btn-outline-warning' onclick='round.heroChangeGear();'>Reequip</button>";
       modalDialog.classList.add("modal-fighting");
       modalDialogSectionTwo.innerHTML = actionButtons;
     }

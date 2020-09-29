@@ -95,6 +95,10 @@ body header button span:after {
   right: -1.6rem;
   transition: 0.5s;
 }
+body header button.btn:disabled {
+  background-color: silver;
+  cursor: not-allowed;
+}
 body .container {
   width: 100%;
   max-width: 50rem;
