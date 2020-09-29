@@ -5,6 +5,7 @@ A JavaScript dungeon crawler :fire: and fighting game :feelsgood:
 ### Info:
 
 - Play the latest version [LIVE CLICK HERE!](https://simonb87.github.io/DigitalDungen/)
+- Current version: 0.0.0 (alfa in development)
 - Game for testing OOP application in :point_right: JavaScript :point_left: :sparkling_heart: .
 
 ### Description:
