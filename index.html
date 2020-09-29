@@ -39,8 +39,9 @@
     <h1>Digital Dungeon</h1>
     <h4>JavaScript Game</h4>
     <!-- <h2>Notice: <span id="gameResultStatement"></span><h2> -->
-    <button id="start"><span>Start! </span> </button>
-    <button id="runTest" onclick="runTest();"><span>Run a Test! </span> </button>
+    <button id="start" class="mainAction"><span>Start! </span> </button>
+    <button id="action" class="secondaryAction" onclick="round.checkForFight();"><span>Action </span> </button>
+    <button id="runTest" class="testAction" onclick="runTest();"><span>Run Test </span> </button>
     </header>
   <div id="board" class="board">
 

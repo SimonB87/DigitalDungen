@@ -56,13 +56,19 @@ body header button {
   cursor: pointer;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
-body header button#start {
+body header button.mainAction {
   background-color: #f4511e;
   color: #ffffff;
   border: 1px solid #000;
   width: 100px;
 }
-body header button#runTest {
+body header button.secondaryAction {
+  background-color: #511ef4;
+  color: #ffffff;
+  border: 1px solid #000;
+  width: 100px;
+}
+body header button.testAction {
   background-color: #ffffff;
   color: #f4511e;
   border: 1px solid #000;

@@ -68,14 +68,21 @@ body {
       cursor: pointer;
       font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 
-      &#start {
+      &.mainAction {
         background-color: @orangeColor;
         color: #ffffff;
         border: @buttonBorder;
         width: @buttonWidth;
       }
 
-      &#runTest {
+      &.secondaryAction {
+        background-color: #511ef4;
+        color: #ffffff;
+        border: @buttonBorder;
+        width: @buttonWidth;
+      }
+
+      &.testAction {
         background-color: #ffffff;
         color: @orangeColor;
         border: @buttonBorder;
