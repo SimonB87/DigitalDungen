@@ -9,6 +9,7 @@ body {
   /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, #ddc7a6, #9a8b74);
   position: relative;
+  /*Generic classes*/
 }
 body .audioElem {
   position: absolute;
@@ -214,9 +215,10 @@ body .modal-content .modal-body {
 body .modal-content .modal-body .modal--content {
   display: flex;
   justify-content: space-evenly;
+  padding: 0.5rem 0;
 }
 body .modal-content .modal-body--sectionOne {
-  height: 21vh;
+  min-height: 15rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,10 +227,42 @@ body .modal-content .modal-body--sectionOne h3 {
   text-align: center;
   padding: 0.5rem 0;
 }
+body .modal-content .modal-body--sectionThree .battleDialog {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 4rem;
+}
+body .modal-content .modal-body--sectionThree .battleDialog .battleDialog--section {
+  width: 50%;
+  padding: 1rem;
+  background-color: #fff;
+}
+body .modal-content .modal-body--sectionThree .battleDialog .battleDialog--section .figureBar {
+  border: 1px solid #000;
+  border-radius: 4px;
+  height: 1rem;
+  width: 100%;
+  margin: 0.25rem 0;
+}
+body .modal-content .modal-body--sectionThree .battleDialog .battleDialog--section .figureBar .figureBarLevel {
+  width: 100%;
+  height: 100%;
+  padding: 0.25rem 0;
+}
+body .modal-content .modal-body--sectionThree .battleDialog .battleDialog--section .figureBar .healthBarLevel {
+  background-color: red;
+}
+body .modal-content .modal-body--sectionThree .battleDialog .battleDialog--section .figureBar .manaBarLevel {
+  background-color: blue;
+}
 body .modal-content .modal-exit {
   color: red;
   -webkit-text-stroke-width: 4px;
   -webkit-text-stroke-color: red;
+}
+body .textAlignCenter {
+  text-align: center;
 }
 @media screen and (max-width: 800px) {
   body div.board > div.tile > div.tile__centre > i.hero {

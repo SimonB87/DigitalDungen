@@ -259,10 +259,11 @@ body {
       .modal--content{
         display: flex;
         justify-content: space-evenly;
+        padding: 0.5rem 0;
       }
     }
     .modal-body--sectionOne {
-      height: 21vh;
+      min-height: 15rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -272,11 +273,48 @@ body {
         padding: 0.5rem 0;
       }
     }
+    .modal-body--sectionThree{
+      .battleDialog {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        min-height: 4rem;
+        .battleDialog--section{
+          width: 50%;
+          padding: 1rem;
+          background-color: #fff;
+          .figureBar{ //halthbar-figureBar //healtbarlevel-figureBarLevel
+            border: @buttonBorder;
+            border-radius: 4px;
+            height: 1rem;
+            width: 100%;
+            margin: 0.25rem 0;
+            .figureBarLevel{
+              width: 100%;
+              height: 100%;
+              padding: 0.25rem 0;
+              transition: width 0.5 linear 0.1;
+            }
+            .healthBarLevel{
+              background-color: red;
+            }
+            .manaBarLevel{
+              background-color: blue;
+            }
+          }
+        }
+      }
+    }
     .modal-exit {
       color: red;
       -webkit-text-stroke-width: 4px;
       -webkit-text-stroke-color: red;
     }
+  }
+
+  /*Generic classes*/
+  .textAlignCenter{
+    text-align: center;
   }
 
   @media screen and (max-width: 800px) {
