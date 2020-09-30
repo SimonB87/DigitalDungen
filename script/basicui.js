@@ -57,6 +57,7 @@ $(document).ready(function() {
   function moveHeroEvaluation() {
     toggleHeroInsideClass();
     prepareRooms();
+    notices.hidePreviousBattleDialog();
     round.checkForFight();
     round.checkForVictory();
     blinkHeroIcon(500);
