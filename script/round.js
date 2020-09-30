@@ -1,10 +1,24 @@
 let round = {
+  currentMonster : {
+    monsterNumber: 0,
+    type: "",
+    position: {
+      x: 0,
+      y: 0
+    }
+  },
   checkForFight: function(){
     const monsterInRoomWithHero = round.checkForPresentMonster();
     if (!( monsterInRoomWithHero == null )) {
       hero.message = "you encountered a " +
       monsterArray[monsterInRoomWithHero].type + " in room " + 
       "X" + monsterArray[monsterInRoomWithHero].position.x + " Y" + monsterArray[monsterInRoomWithHero].position.y;
+
+      this.currentMonster.monsterNumber = monsterInRoomWithHero;
+      this.currentMonster.type = monsterArray[monsterInRoomWithHero].type;
+      this.currentMonster.position.x = monsterArray[monsterInRoomWithHero].position.x;
+      this.currentMonster.position.y = monsterArray[monsterInRoomWithHero].position.y;
+
       hero.situation = "fighting";
     } else {
       hero.message ="Room is empty!";
@@ -42,6 +56,11 @@ let round = {
   heroAttacks: function(){
     //document.querySelector(".modal-dialog .close").click();
     hero.situation = "attacking";
+
+    hero.message = `You are attacking the ${this.currentMonster.type} in room X${this.currentMonster.position.x} Y${this.currentMonster.position.y}.`;
+    const newMessage = `<strong>Notice: </strong> ${hero.message} <br> <strong>State: </strong> ${hero.situation} <br> <h3>Choose action:</h3> `;
+    document.getElementById("myModal--notice").innerHTML = newMessage;
+
     notices.showBattleDialog();
     this.settleBattleRound();//TODO
     this.showBattleRoundResult();//TODO
@@ -49,6 +68,11 @@ let round = {
   heroDefends: function(){
     //document.querySelector(".modal-dialog .close").click();
     hero.situation = "defending";
+
+    hero.message = `You are defending against the ${this.currentMonster.type} in room X${this.currentMonster.position.x} Y${this.currentMonster.position.y}.`;
+    const newMessage = `<strong>Notice: </strong> ${hero.message} <br> <strong>State: </strong> ${hero.situation} <br> <h3>Choose action:</h3> `;
+    document.getElementById("myModal--notice").innerHTML = newMessage;
+
     notices.showBattleDialog();
     this.settleBattleRound();
     this.showBattleRoundResult();
