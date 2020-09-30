@@ -37,5 +37,13 @@ const notices = {
     spaceInModal.innerHTML = spaceModalContent;
 
     //TODO show monster and hero stats
+  },
+  hidePreviousBattleDialog: function(){
+
+    const selectorModalSection = "modalSectionThree";
+    const spaceInModal = document.getElementById(selectorModalSection);
+    const spaceModalContent = ``;
+    spaceInModal.innerHTML = spaceModalContent;
+
   }
 }
