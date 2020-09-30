@@ -82,7 +82,8 @@ let round = {
     moveHero.heroRunsAway();
     this.prepareRoomBeforeRound();
     setTimeout(function(){ 
-      round.checkForFight(); 
+      round.checkForFight();
+      notices.hidePreviousBattleDialog();
     }, 
     1000);
   },
@@ -93,6 +94,15 @@ let round = {
   settleBattleRound: function(){
     //TODO
     console.log("Calculate battle results ...");
+
+    const heroHealthBar = document.getElementById("heroHealthBarLevel");
+    const monsterHealthBarLevel = document.getElementById("monsterHealthBarLevel");
+
+    const heroDice = Math.floor(Math.random() * 100);
+    const monsterDice = 0.5 * heroDice;
+
+    heroHealthBar.style.width = `${heroDice}%`;
+    monsterHealthBarLevel.style.width = `${monsterDice}%`;
   },
   showBattleRoundResult: function(){
     //TODO
