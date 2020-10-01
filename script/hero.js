@@ -7,6 +7,10 @@ hero = {
     x: 1,
     y: 1
   },
+  strength: 6,
+  defense: 4,
+  hitPoints: 100,
+  mana: 5,
   situation: "",
   message: "",
   heroAvatar: "<i class='hero fas'>&#xf521;</i>",
