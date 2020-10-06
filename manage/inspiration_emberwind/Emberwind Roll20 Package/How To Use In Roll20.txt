@@ -1,0 +1,6 @@
+How to Use Maps:
+1) Place corresponding Map on the Map Layer on Roll20.
+2) Scale each map so that the grid lines up with the map.
+
+How to Use Tokens:
+1) Place Tokens on the Token Layer corresponding to the Legend in Skies of Axia.
