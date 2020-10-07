@@ -108,6 +108,11 @@ let round = {
     //TODO
     console.log("Show battle results ...");
   },
+  diceRoll: function(countDiceSides){
+    const maximum = parseInt(countDiceSides);
+    const randomNumber = Math.floor(Math.random() * maximum) + 1;
+    return randomNumber;
+  },
   prepareRoomBeforeRound: function(){
     toggleHeroInsideClass();
     prepareRooms();
