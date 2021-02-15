@@ -44,8 +44,6 @@ let round = {
       const actionButtons = 
         "<button id='roundButtonAttack' type='button' class='btn btn-outline-primary btn-actions' onclick='round.heroAttacks();'>" +
         "Attack</button>" + 
-        "<button id='roundButtonDefend' type='button' class='btn btn-outline-info btn-actions' onclick='round.heroDefends();'>" + 
-        "Deffend</button>" + 
         "<button id='roundButtonWithdraw' type='button' class='btn btn-outline-dark btn-actions' onclick='round.heroWithDraws();'>" +
         "Escape</button>" + 
         "<button id='roundButtonReequip' type='button' class='btn btn-outline-warning' onclick='round.heroChangeGear();'>Reequip</button>";
@@ -64,18 +62,6 @@ let round = {
     notices.showBattleDialog();
     this.settleBattleRound();//TODO
     this.showBattleRoundResult();//TODO
-  },
-  heroDefends: function(){
-    //document.querySelector(".modal-dialog .close").click();
-    hero.situation = "defending";
-
-    hero.message = `You are defending against the ${this.currentMonster.type} in room X${this.currentMonster.position.x} Y${this.currentMonster.position.y}.`;
-    const newMessage = `<strong>Notice: </strong> ${hero.message} <br> <strong>State: </strong> ${hero.situation} <br> <h3>Choose action:</h3> `;
-    document.getElementById("myModal--notice").innerHTML = newMessage;
-
-    notices.showBattleDialog();
-    this.settleBattleRound();
-    this.showBattleRoundResult();
   },
   heroWithDraws: function(){
     document.querySelector(".modal-dialog .close").click();
